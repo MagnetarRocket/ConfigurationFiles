@@ -1,0 +1,217 @@
+TitleFont "-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso8859-1"
+ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+
+# -misc-fixed-bold-r-normal--15-140-75-75-c-90-iso8859-1
+#options left without brackets are global
+# <Window:>
+NoDefaults
+NoGrabServer
+# DecorateTransients
+NoTitle
+{}                 # No title bars on these windows
+# NoRaiseOnMove           # Drag underneath windows
+# {}
+OpaqueMove              # Show contents while dragging
+BorderWidth 1           # No borders on any windows
+ClientBorderWidth 0
+ButtonIndent 2
+NoHighlight
+AutoRelativeResize
+FramePadding 1
+Zoom 500
+
+#
+# Icons:
+#
+#IconManagerGeometry "800x60+0+0" 90      # up/left, four icons per row
+ShowIconManager                         # Use the icon manager
+#IconifyByUnmapping                      # Don't show other icons
+IconManagerDontShow
+{
+        
+}
+DontIconifyByUnmapping
+{
+        "XMMS"
+}
+
+# apperance:
+NoMenuShadows
+SquezeTitle center 1 2
+Color
+{
+    BorderColor "Cyan"
+    DefaultBackground "blue"
+    DefaultForeground "white"
+    TitleBackground "orange"
+    TitleForeground "black"
+    MenuBorderColor "cyan"
+    MenuBackground "white"
+    MenuForeground "black"
+    MenuTitleBackground "orange"
+    MenuTitleForeground "black"
+    IconBackground "lightblue"
+    IconForeground "black"
+    IconBorderColor "cyan"
+    IconManagerBackground "lightblue"
+    IconManagerForeground "black"
+    PointerForeground "firebrick"
+    PointerBackground "crimson"
+
+}
+
+#{
+#    BorderColor "Cyan"
+#    DefaultBackground "blue"
+#    DefaultForeground "white"
+#    TitleBackground "blue"
+#    TitleForeground "White"
+#    MenuBorderColor "cyan"
+#    MenuBackground "navyblue"
+#    MenuForeground "white"
+#    MenuTitleBackground "blue"
+#    MenuTitleForeground "white"
+#    IconBackground "blue"
+#    IconForeground "white"
+#    IconBorderColor "cyan"
+#    IconManagerBackground "navyblue"
+#    IconManagerForeground "white"
+#    PointerForeground "blue"
+#    PointerBackground "skyblue"
+#}
+
+Cursors
+{
+ Frame     "left_ptr"
+ Title     "left_ptr"
+ Icon      "left_ptr"
+ IconMgr   "left_ptr"
+ Move      "left_ptr"
+ Resize    "fleur"
+ Menu      "left_ptr"
+ Button    "left_ptr"
+ Wait      "clock"
+ Select    "dot"
+ Destroy   "target"
+}
+
+#
+# Define some useful functions for motion-based actions.
+#
+MoveDelta 1
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+##
+# Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
+#
+Button1 = : root : f.menu "defops"
+Button3 = : root : f.menu "main"
+
+Button1 = m : window|icon : f.function "move-or-raise"
+Button2 = m : window|icon : f.iconify
+Button3 = m : window|icon : f.function "move-or-lower"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+Button3 = : title : f.menu ="window"
+
+Button1 = : icon : f.function "move-or-iconify"
+Button3 = : icon : f.iconify
+
+Button3 = : iconmgr : f.lower
+Button1 = : iconmgr : f.raise
+
+# custom title bar:
+LeftTitleButton  "/Users/scragg/Pictures/local-icons/resizeLeft2" = f.resize
+# LeftTitleButton "/Users/scragg/Pictures/local-icons/Iconize2" = f.iconify
+LeftTitleButton "/Users/scragg/Pictures/local-icons/maxmize" = f.fullzoom
+RightTitleButton "/Users/scragg/Pictures/local-icons/close2" = f.delete
+RightTitleButton "/Users/scragg/Pictures/local-icons/resizeRight2"  = f.resize
+
+
+#
+# And a menus with the usual things
+#
+menu "main"
+{
+"System menu"          f.title
+"uxterm"         f.exec "uxterm &"
+"man"		f.exec "xman &"
+#"Email"         f.exec "sylpheed --geometry=202x69+0+48 &"
+#"Mozilla"       f.exec "mozilla -viewer &"
+#"Xosview"       f.exec "xosview +net &"
+"Xcalc"         f.exec "xcalc &"
+"Network"       f.menu "internet"
+"Graphics"      f.menu "graphics"
+"Music"         f.menu "music"
+"Actions"	f.menu "window"
+"Twm "		f.menu "twm"
+}
+
+menu "internet"
+{
+"Network"       f.title
+"GFTP"          f.exec "gftp --geometry=202x69+0+48 &"
+"GTK-Gnutella"  f.exec "gtk-gnutella &"
+"VNC:1" f.exec "vncviewer -noauto -geometry 800x600 -depth 16 -passwd
+/root/.vnc/passwd spyro:1 &"
+
+
+}
+
+menu "graphics"
+{
+	"Graphics"      f.title
+# "XV"            f.exec "xv &"
+# "Gimp"          f.exec "gimp &"
+	"X bitmap editor" f.exec "bitmap &"
+}
+
+# menu "music"
+# {
+# "Music"         f.title
+# "XMMS"          f.exec "xmms &"
+# "Aumix"         f.exec "aumix &"
+# }
+
+menu "window"
+{
+"Actions"      f.title
+"Term Window"    f.destroy
+"Delete Window"  f.delete
+"-------------"  f.nop
+"Maximize"       f.fullzoom
+"Minimize"       f.iconify
+"Resize"         f.resize
+"Move"           f.move
+"Raise"          f.raise
+"Lower"          f.lower
+"-------------"  f.nop
+"Focus"          f.focus
+"Unfocus"        f.unfocus
+"Show Iconmgr"   f.showiconmgr
+"Hide Iconmgr"   f.hideiconmgr
+"-------------"  f.nop
+#"Screensaver"    f.menu "screensaver"
+"Redraw"         f.refresh
+
+}
+
+menu "twm"
+{
+"Restart"        f.restart
+"Quit"           f.menu "quit"
+}
+
+menu "quit"
+{
+"Really Quit?"     f.title
+"Quit X"              f.quit
+#"Quit all"           f.exec "killall -9 xterm"
+}
+

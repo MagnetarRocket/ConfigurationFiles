@@ -1,0 +1,330 @@
+#some apps can have seprate dialog windows a diffrent color then the parent window, just look at the name of the dialog window in front of you or the man page. 
+# the loose guidelines are: Console output and dangerous stuff is in red, file dialogs are black and white, Scrollbars are Lightgrey and darkgrey, Buttons and menu are lightgrey & black, long human read-only text is cornsilk, editable text is black and white
+#some scrollbars are in black only, the author was unable to make them constitant, when the author was unable to make them constitant, he tried to make them color matching with the text
+#any app that has color prefrences defined will overide global
+
+# <global>
+# //leaving background on causes color issues in bitmap
+*background:lightgrey
+*foreground:black
+*topShadowColor:steel
+*bottomShadowColor:slate
+
+*scrollbar*Background: darkgrey
+*scrollbar*Foreground: lightgrey
+*scrollbar*Color:black
+
+*menuBar*Background: black
+*menuBar*Foreground: white
+*menuBar*topShadowColor:black
+*menuBar*bottomShadowColor:grey
+
+*menu*background:black
+*menu*foreground:white
+*menu*topShadowColor:black
+*menu*bottomShadowColor:grey
+
+#*scrollBar: true
+
+control*scrollbar*thickness: 16
+*thumb: black
+*scrollBarPlacement: BOTTOM_LEFT
+# /TOP_RIGHT /TOP_LEFT /BOTTOM_RIGHT /BOTTOM_LEFT
+
+control*matteBackgound: lightgrey
+control*matteForeground: darkgrey
+
+# <xclock>
+xclock*width:150
+xclock*height:150
+
+xclock*background: black
+xclock*foreground: lightgrey
+xclock*hourColor: crimson
+xclock*minuteColor: darkred
+xclock*secondColor:cyan
+xclock*majorColor: gold
+xclock*minorColor: goldenrod
+
+xclock*anlog: true
+xclock*twentyFour: false
+# <xedit>
+xedit*Background:darkgrey
+xedit*Foreground:lightgrey
+
+xedit*buttons*Background: lightgrey
+xedit*buttons*Foreground: darkgrey
+
+xedit*buttons*filename*Background: white
+xedit*buttons*filename*Foreground: black
+
+
+xedit*messageWindow*Background: darkred
+xedit*messageWindow*Foreground: red
+
+xedit*labelWindow*Background: darkgrey
+xedit*labelWindow*Foreground: lightgrey
+
+xedit*editWindow*scrollbar*Background: darkgrey
+xedit*editWindow*scrollbar*Foreground: lightgrey
+xedit*editWindow*thickness: 16
+xedit*editWindow*thumb: black
+
+xedit*editWindow*Background: white
+xedit*editWindow*Foreground: black
+
+
+# <>
+#Control*Background: White
+#Control*Foreground: black
+# <nedit>
+#nedit*background: lightgrey
+#nedit*foreground: black
+
+#nedit*topShadowColor: 
+#nedit*bottomShadowColor:
+
+#nedit*menu*Background:white
+#nedit*menu*Foreground:black
+
+nedit.visualID: Default
+#/Best /Default
+#nedit:
+
+# <xconsole>
+xconsole*background: darkred
+xconsole*Foreground: red
+xconsole*scrollbar*Background: darkgrey
+xconsole*scrollbar*Foreground: lightgrey
+xconsole*scrollBar: false
+#<xterm>
+XTerm*background: white
+XTerm*foreground: black
+
+XTerm*scrollbar*Background: darkgrey
+XTerm*scrollbar*Foreground: lightgrey
+XTerm*scrollBar: true
+XTerm*thickness: 14
+XTerm*thumb: black
+
+XTerm*toolbar*background:lightgrey
+XTerm*toolbar*foreground:black
+XTerm*toolBar: true
+XTerm*menuHeight:25
+
+XTerm*cursorBlink: true
+# false/true/always/never
+
+# <bitmap>
+
+#bitmap*foreground:white
+#bitmap*foreground:black
+
+bitmap*fileButton*background: white
+bitmap*fileButton*foreground: black
+
+bitmap*fileMenu*background: black
+bitmap*fileMenu*foreground: white
+
+bitmap*editButton*background: white
+bitmap*editButton*foreground: black
+
+bitmap*editMenu*background: black
+bitmap*editMenu*foreground: white
+
+bitmap*bitmap*background:white
+
+#bitmap*form*background: lightgrey
+#bitmap*form*foreground: black
+
+bitmap*form*clear*background: darkred
+bitmap*form*clear*foreground: red
+
+bitmap*form*set*background: white
+bitmap*form*set*foreground: black
+
+bitmap*form*invert*background: white
+bitmap*form*invert*foreground: black
+
+bitmap*form*mark*background: white
+bitmap*form*mark*foreground: black
+
+bitmap*form*unmark*background: white
+bitmap*form*unmark*foreground: black
+
+bitmap*form*copy*background: white
+bitmap*form*copy*foreground: black
+
+bitmap*form*move*background: white
+bitmap*form*move*foreground: black
+
+bitmap*form*setHotSpot*background: white
+bitmap*form*setHotSpot*foreground: black
+
+bitmap*form*clearHotSpot*background: white
+bitmap*form*clearHotSpot*foreground: black
+
+bitmap*form*undo*background: white
+bitmap*form*undo*foreground: black
+
+bitmap*image*background:White
+bitmap*image*foreground:black
+
+bitmap*error*background:darkred
+bitmap*error*foreground:red
+
+bitmap*input*background:White
+bitmap*input*foreground:black
+
+bitmap*qsave*background:White
+bitmap*qsave*foreground:black
+
+
+# <UXTerm>
+UXTerm*scrollBar: true
+UXTerm*toolBar: true
+
+UXTerm*background: black
+UXTerm*foreground: white
+UXTerm*thickness: 14
+UXTerm*thumb: black
+UXTerm*scrollBar*background: green
+UXTerm*scrollBar*foreground: red
+# <twm>
+
+# <urxvt>
+urxvt*iconFile: woman
+urxvt*background:white
+urxvt*foreground:black
+urxvt*border:lightgrey
+
+urxvt*troughColor: darkgrey
+urxvt*scrollColor: lightgrey
+
+urxvt*scrollstyle: rxvt
+# rxvt / plain / next / xterm
+
+urxvt*thickness: 12
+urxvt*scrollBar: true
+urxvt*scrollBar_right: false
+urxvt*scrollBar_floating: false
+
+urxvt*SHELL: /opt/brew/bin/rc
+#urxvt*backspacekey: BACKSPACE
+#urxvt*deletekey: U+0008
+# <xman>
+xman*bothShown: true
+xman*verticalList: true
+xman*background: white
+xman*foreground: black
+
+xman*horizPane*background: lightgrey
+xman*horizPane*foreground: black
+
+xman*manualPage*background:cornsilk
+xman*manualPage*foreground:black
+
+xman*manualPage*scrollbar*Background: darkgrey
+xman*manualPage*scrollbar*Foreground: lightgrey
+xman*manualPage*thickness: 14
+
+xman*optionMenu*background: lightgrey
+xman*optionMenu*foreground: black
+
+xman*sectionMenu*background: cornsilk
+xman*sectionMenu*foreground: black
+
+xman*search*background:white
+xman*search*foreground:black
+
+xman*help*background:lightgrey
+xman*help*foreground:black
+
+xman*help*manualPage*background:cornsilk
+xman*help*manualPage*foreground:black
+
+xman*help*manualPage*scrollbar*Background: darkgrey
+xman*help*manualPage*scrollbar*Foreground: lightgrey
+xman*help*manualPage*thickness: 14
+
+xman*topBox*background:lightgrey
+xman*topbox*foreground:black
+
+xman*simpleMenu*background:lightgrey
+xman*simpleMenu*foreground:black
+
+xman*menu*background: lightgrey
+xman*menu*foreground: black
+
+xman*directory*scrollbar*Background: darkgrey
+xman*directory*scrollbar*Foreground: lightgrey
+
+xman*scrollbar*Background: darkgrey
+xman*scrollbar*Foreground: lightgrey
+xman*scrollBar: true
+xman*thickness: 14
+xman*thumb: black
+
+# <mwm>
+# apperance:
+mwm*frameStyle: recessed
+# -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1 #
+mwm*fontList: -b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1
+# slab / recessed
+mwm*iconDecoration: label image
+# label / image / label image
+mwm*frameBorderWith: 10
+mwm*resizeBorderWidth: 10
+mwm*matteWidth: 0
+# colors:
+# #7082B5 $195;196;237 #8E8290
+
+# pixmaps:
+# /opt/x11/include/x11/bitmaps
+
+# mwm*background: grey
+# mwm*backgroundPixmap:/opt/x11/include/x11/bitmaps/dot
+mwm*foreground: black
+mwm*topShadowColor: steel
+# mwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
+mwm*bottomShadowColor: slate
+# mwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
+
+mwm*activeBackground: #7082B5
+# mwm*activeBackgroundPixmap:/opt/x11/include/x11/bitmaps/black
+mwm*activeForeground: white
+mwm*activeBottomShadowColor: blue
+# mwm*activeBottomShadowPixmap:/opt/x11/include/x11/bitmaps/grid2
+mwm*activeTopShadowColor: skyblue
+# mwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/grid2
+
+mwm*matteBackground: lightgrey
+# mwm*matteBackgroundPixmap:/opt/x11/include/x11/bitmaps/grid4
+mwm*matteForeground: black
+mwm*matteTopShadowColor:slate
+mwm*matteBottomShadowColor: white
+
+mwm*iconImageBackground: white
+mwm*iconImageForeground: black
+mwm*iconImageTopShadowColor: lightgrey
+mwm*iconImageBottomShadowColor: darkgrey
+
+mwm*menu*background: black
+# mwm*menu*backgroundPixmap:/opt/x11/include/x11/bitmaps/grid8
+mwm*menu*foreground: white
+mwm*menu*topShadowColor: skyblue
+mwm*menu*bottomShadowColor: blue
+
+# beathor:
+mwm*moveOpaque: true
+# icons:
+mwm*useIconBox:	true
+mwm*iconBoxTitle: Apps
+mwm*fadeNormalIcon: true
+# mwm*iconBoxName: 
+mwm*iconBoxSBDisplayPolicy: horizontal
+# all / vertical / horizontal
+
+mwm*iconPlacement: left bottom
+# top / right / left / bottom
+#<>
