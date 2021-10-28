@@ -277,7 +277,7 @@ mwm*frameBorderWith: 10
 mwm*resizeBorderWidth: 10
 mwm*matteWidth: 0
 # colors:
-# #7082B5 $195;196;237 #8E8290
+# #7082B5 #C3C4ED #8E8290
 
 # pixmaps:
 # /opt/x11/include/x11/bitmaps
