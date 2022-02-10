@@ -142,263 +142,18 @@
 
 *arrowButton*Background: black
 
-
-! <xclock>
-# xclock*xrm: "/Users/scragg/Configurations/mr_xclock.rc"
-xclock*width:150
-xclock*height:150
-
-xclock*background: black
-xclock*foreground: lightgrey
-xclock*hourColor: crimson
-xclock*minuteColor: darkred
-xclock*secondColor:cyan
-xclock*majorColor: gold
-xclock*minorColor: goldenrod
-xclock*analog: true
-xclock*twentyFour: true
-! <xedit>
-xedit*Background:darkgrey
-xedit*Foreground:lightgrey
-
-xedit*buttons*Background: lightgrey
-xedit*buttons*Foreground: darkgrey
-
-xedit*buttons*filename*Background: white
-xedit*buttons*filename*Foreground: black
-
-
-xedit*messageWindow*Background: darkred
-xedit*messageWindow*Foreground: red
-
-xedit*labelWindow*Background: darkgrey
-xedit*labelWindow*Foreground: lightgrey
-
-xedit*editWindow*scrollbar*Background: darkgrey
-xedit*editWindow*scrollbar*Foreground: lightgrey
-xedit*editWindow*thickness: 16
-xedit*editWindow*thumb: black
-
-xedit*editWindow*Background: white
-xedit*editWindow*Foreground: black
-
-
-# <>
-#Control*Background: White
-#Control*Foreground: black
-# <nedit>
-
-nedit*text*background:black
-nedit*text*foreground:white
-nedit*text*topShadowColor: black
-nedit*text*bottomShadowColor:slate
-#nedit*background: lightgrey
-#nedit*foreground: black
-
-#nedit*topShadowColor: 
-#nedit*bottomShadowColor:
-
-#nedit*menu*Background:white
-#nedit*menu*Foreground:black
-
-nedit.visualID: Default
-#/Best /Default
-#nedit:
-
-# <xconsole>
-xconsole*background: darkred
-xconsole*Foreground: red
-xconsole*scrollbar*Background: darkgrey
-xconsole*scrollbar*Foreground: lightgrey
-xconsole*scrollBar: false
-#<xterm>
-XTerm*background: white
-XTerm*foreground: black
-
-XTerm*scrollbar*Background: darkgrey
-XTerm*scrollbar*Foreground: #E5E5E5
-XTerm*scrollBar: true
-XTerm*thickness: 14
-XTerm*thumb: /Users/scragg/pictures/local-icons/p3dbar
-
-XTerm*toolbar*background:lightgrey
-XTerm*toolbar*foreground:black
-XTerm*toolBar: true
-XTerm*menuHeight:25
-
-XTerm*cursorBlink: true
-# false/true/always/never
-
-# <bitmap>
-
-#bitmap*foreground:white
-#bitmap*foreground:black
-
-bitmap*fileButton*background: white
-bitmap*fileButton*foreground: black
-
-bitmap*fileMenu*background: black
-bitmap*fileMenu*foreground: white
-
-bitmap*editButton*background: white
-bitmap*editButton*foreground: black
-
-bitmap*editMenu*background: black
-bitmap*editMenu*foreground: white
-
-bitmap*bitmap*background:white
-
-#bitmap*form*background: lightgrey
-#bitmap*form*foreground: black
-
-bitmap*form*clear*background: darkred
-bitmap*form*clear*foreground: red
-
-bitmap*form*set*background: white
-bitmap*form*set*foreground: black
-
-bitmap*form*invert*background: white
-bitmap*form*invert*foreground: black
-
-bitmap*form*mark*background: white
-bitmap*form*mark*foreground: black
-
-bitmap*form*unmark*background: white
-bitmap*form*unmark*foreground: black
-
-bitmap*form*copy*background: white
-bitmap*form*copy*foreground: black
-
-bitmap*form*move*background: white
-bitmap*form*move*foreground: black
-
-bitmap*form*setHotSpot*background: white
-bitmap*form*setHotSpot*foreground: black
-
-bitmap*form*clearHotSpot*background: white
-bitmap*form*clearHotSpot*foreground: black
-
-bitmap*form*undo*background: white
-bitmap*form*undo*foreground: black
-
-bitmap*image*background:White
-bitmap*image*foreground:black
-
-bitmap*error*background:darkred
-bitmap*error*foreground:red
-
-bitmap*input*background:White
-bitmap*input*foreground:black
-
-bitmap*qsave*background:White
-bitmap*qsave*foreground:black
-
-
-# <UXTerm>
-UXTerm*scrollBar: false
-UXTerm*toolBar: true
-
-UXTerm*background: black
-UXTerm*foreground: white
-UXTerm*thickness: 14
-UXTerm*thumb: black
-UXTerm*scrollBar*background: green
-UXTerm*scrollBar*foreground: red
-# <twm>
-
-# <urxvt>
-urxvt*iconFile: woman
-urxvt*background:white
-urxvt*foreground:black
-urxvt*border:lightgrey
-
-urxvt*troughColor: darkgrey
-urxvt*scrollColor: #E5E5E5
-
-urxvt*scrollstyle: rxvt
-# rxvt / plain / next / xterm
-
-urxvt*thickness: 12
-urxvt*scrollBar: true
-urxvt*scrollBar_right: false
-urxvt*scrollBar_floating: false
-
-urxvt*SHELL: /opt/brew/bin/rc
-#urxvt*backspacekey: BACKSPACE
-#urxvt*deletekey: U+0008
-# <xman>
-xman*bothShown: true
-xman*verticalList: true
-xman*background: white
-xman*foreground: black
-
-xman*horizPane*background: lightgrey
-xman*horizPane*foreground: black
-
-xman*manualPage*background:antiquewhite
-xman*manualPage*foreground:black
-
-xman*manualPage*scrollbar*Background: darkgrey
-xman*manualPage*scrollbar*Foreground: #E5E5E5
-xman*manualPage*thickness: 14
-
-xman*optionMenu*background: lightgrey
-xman*optionMenu*foreground: black
-
-xman*sectionMenu*background: antiquewhite
-xman*sectionMenu*foreground: black
-
-xman*search*background:white
-xman*search*foreground:black
-
-xman*help*background:lightgrey
-xman*help*foreground:black
-
-xman*help*manualPage*background:cornsilk
-xman*help*manualPage*foreground:black
-
-xman*help*manualPage*scrollbar*Background: darkgrey
-xman*help*manualPage*scrollbar*Foreground: #E5E5E5
-xman*help*manualPage*thickness: 14
-
-xman*topBox*background:lightgrey
-xman*topbox*foreground:black
-
-xman*simpleMenu*background:lightgrey
-xman*simpleMenu*foreground:black
-
-xman*menu*background: lightgrey
-xman*menu*foreground: black
-
-xman*directory*scrollbar*Background: darkgrey
-xman*directory*scrollbar*Foreground: #E5E5E5
-
-xman*scrollbar*Background: darkgrey
-xman*scrollbar*Foreground: #E5E5E5
-xman*scrollBar: true
-xman*thickness: 14
-# xman*thumb: black
-
-# <grace>
-grace*GRACE_HELPVIEWER:
-
-# <xmToolBox>
-xmtoolbox*ShowSuspend: False
-
 # <mwm/emwm>
 # apperance:
-# mwm*useIr: false (Use Sgi-style icons in the buttons)
-emwm*titleLeft: true
 
 mwm*frameStyle: recessed
-# -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1 #
-mwm*fontList: -b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1
 # slab / recessed
 mwm*iconDecoration: label image
 # label / image / label image
 mwm*frameBorderWith: 10
 mwm*resizeBorderWidth: 10
 mwm*matteWidth: 0
+# -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1 #
+mwm*fontList: -b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1
 # colors:
 # #7082B5 $195;196;237 #8E8290
 
@@ -409,23 +164,18 @@ mwm*xman.clientDecoration: +resizeh +menu +title
 # mwm*urxvt.clientDecoration: +resizeh +menu +minimize 
 # mwm*xterm.clientDecoration: +resizeh
 # mwm*clientDecoration: +resizeh +menu +minimize +zap
-# mwm*zapAfterTwo: false
-emwm*xmtoolbox.clientDecoration: +title
+
 mwm*iconbox.clientDecoration: -resizeh -title
-emwm*iconbox.clientDecoration: -resizeh -title
 
 # pixmaps:
 # /opt/x11/include/x11/bitmaps
 
 # mwm*background: salmon
-emwm*background: grey
 # mwm*backgroundPixmap:/opt/x11/include/x11/bitmaps/dot
 # mwm*foreground: black
 # mwm*topShadowColor: lightsalmon
-emwm*topShadowColor: white
 # mwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
 # mwm*bottomShadowColor: crimson
-emwm*bottomShadowColor: black
 # mwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
 
 mwm*title*background:darkblue
@@ -438,21 +188,16 @@ mwm*title*bottomShadow: black
 
 mwm*activeBackground: #7082B5
 # mwm*activeBackgroundPixmap:/opt/x11/include/x11/bitmaps/black
-emwm*activeBackground: #7082B5
 mwm*activeForeground: white
-emwm*activeForeground: white
 
 mwm*activeBottomShadowColor: blue
-emwm*activeBottomShadowColor: black
 # mwm*activeBottomShadowPixmap:/opt/x11/include/x11/bitmaps/grid2
 
 mwm*activeTopShadowColor: skyblue
-emwm*activeTopShadowColor: white
 # mwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/grid2
 
 
 mwm*title*activeBackground:black
-emwm*title*activeBackground: orange
 mwm*title*activeForeground:white
 mwm*title*activeTopShadow:white
 mwm*title*activeBottomShadow: black
@@ -481,10 +226,8 @@ mwm*iconImageTopShadowColor: lightgrey
 mwm*iconImageBottomShadowColor: darkgrey
 
 mwm*menu*background: black
-emwm*menu*background: lightgrey
 # mwm*menu*backgroundPixmap:
 mwm*menu*foreground: white
-emwm*menu*foreground: black
 mwm*menu*topShadowColor: skyblue
 mwm*menu*bottomShadowColor: blue
 mwm*menu*XmLabelGadget*background: #7082B5
@@ -498,19 +241,14 @@ mwm*menu*back*backgound:green
 # beathor:
 mwm*leftTitle:trues
 mwm*moveOpaque: true
-emwm*moveOpaque: true
 mwm*showFeedback: behavior restart quit
-emwm*showFeedback: behavior restart quit
 # placement / resize / behavior / restart / quit
 # icons:
 mwm*useIconBox:	true
-emwm*useIconBox: true
 mwm*iconBoxTitle: Apps
-emwm*iconBoxTitle: "Apps"
 mwm*fadeNormalIcon: false
 # mwm*iconBoxName: 
 mwm*iconBoxSBDisplayPolicy: horizontal
-emwm*iconBoxSBDisplayPolicy: horizontal
 # all / vertical / horizontal
 
 mwm*iconPlacement: left bottom
