@@ -1,0 +1,1 @@
+PROMPT="%S%n %sk
