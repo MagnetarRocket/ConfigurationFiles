@@ -142,134 +142,115 @@
 
 *arrowButton*Background: black
 
-# <mwm/emwm>
+# <emwm>
 # apperance:
-# mwm*useIr: false (Use Sgi-style icons in the buttons)
 emwm*titleLeft: true
 
-mwm*frameStyle: recessed
+emwm*frameStyle: recessed
 # -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1 #
-mwm*fontList: -b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1
+emwm*fontList: -b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1
 # slab / recessed
-mwm*iconDecoration: label image
+emwm*iconDecoration: label image
 # label / image / label image
-mwm*frameBorderWith: 10
-mwm*resizeBorderWidth: 10
-mwm*matteWidth: 0
+emwm*frameBorderWith: 10
+emwm*resizeBorderWidth: 10
+emwm*matteWidth: 0
 # colors:
 # #7082B5 $195;196;237 #8E8290
 
 # window button prefrences:
 # resizeh menu title minimize maximize (a future version is "zap" as in the windows close button)
-mwm*xclock.clientDecoration: -resizeh -title -maximize
-mwm*xman.clientDecoration: +resizeh +menu +title
-# mwm*urxvt.clientDecoration: +resizeh +menu +minimize 
-# mwm*xterm.clientDecoration: +resizeh
-# mwm*clientDecoration: +resizeh +menu +minimize +zap
-# mwm*zapAfterTwo: false
+emwm*xclock.clientDecoration: -resizeh -title -maximize
+emwm*xman.clientDecoration: +resizeh +menu +title
+# emwm*urxvt.clientDecoration: +resizeh +menu +minimize 
+# emwm*xterm.clientDecoration: +resizeh
+# emwm*clientDecoration: +resizeh +menu +minimize +zap
 emwm*xmtoolbox.clientDecoration: +title
-mwm*iconbox.clientDecoration: -resizeh -title
 emwm*iconbox.clientDecoration: -resizeh -title
 
 # pixmaps:
 # /opt/x11/include/x11/bitmaps
 
-# mwm*background: salmon
 emwm*background: grey
-# mwm*backgroundPixmap:/opt/x11/include/x11/bitmaps/dot
-# mwm*foreground: black
-# mwm*topShadowColor: lightsalmon
+# emwm*backgroundPixmap:/opt/x11/include/x11/bitmaps/dot
 emwm*topShadowColor: white
 # mwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
-# mwm*bottomShadowColor: crimson
 emwm*bottomShadowColor: black
-# mwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
+# emwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
 
-mwm*title*background:darkblue
-mwm*title*foreground:skyblue
-mwm*title*topShadow:white
-mwm*title*bottomShadow: black
+emwm*title*background:darkblue
+emwm*title*foreground:skyblue
+emwm*title*topShadow:white
+emwm*title*bottomShadow: black
 
-# mwm*feedback*background:#E5E5E5
-# mwm*feedback*foreground:dimgrey
+# emwm*feedback*background:#E5E5E5
+# emwm*feedback*foreground:dimgrey
 
-mwm*activeBackground: #7082B5
+
 # mwm*activeBackgroundPixmap:/opt/x11/include/x11/bitmaps/black
 emwm*activeBackground: #7082B5
-mwm*activeForeground: white
 emwm*activeForeground: white
 
-mwm*activeBottomShadowColor: blue
 emwm*activeBottomShadowColor: black
-# mwm*activeBottomShadowPixmap:/opt/x11/include/x11/bitmaps/grid2
+# emwm*activeBottomShadowPixmap:/opt/x11/include/x11/bitmaps/grid2
 
-mwm*activeTopShadowColor: skyblue
 emwm*activeTopShadowColor: white
-# mwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/grid2
+# emwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/grid2
 
 
 mwm*title*activeBackground:black
 emwm*title*activeBackground: orange
-mwm*title*activeForeground:white
-mwm*title*activeTopShadow:white
-mwm*title*activeBottomShadow: black
+emwm*title*activeTopShadow:Gold
+emwm*title*activeBottomShadow: goldenrod
 
-mwm*matteBackground: lightgrey
+emwm*matteBackground: lightgrey
 # mwm*matteBackgroundPixmap:/opt/x11/include/x11/bitmaps/grid4
-mwm*matteForeground: black
-mwm*matteTopShadowColor:slate
-mwm*matteBottomShadowColor: white
+emwm*matteForeground: black
+emwm*matteTopShadowColor:slate
+emwm*matteBottomShadowColor: white
 
-mwm*XmPushButtonGadget.background: #7082B5
-mwm*XmPushButtonGadget.foreground: white
-mwm*XmPushButtonGadget.topShadowColor:skyblue
-mwm*XmPushButtonGadget.bottomShadowColor:blue
+emwm*XmPushButtonGadget.background: #7082B5
+emwm*XmPushButtonGadget.foreground: white
+emwm*XmPushButtonGadget.topShadowColor:skyblue
+emwm*XmPushButtonGadget.bottomShadowColor:blue
 
-mwm*XmScrollBar*background: red
-mwm*XmScrollBar*topShadowColor: salmon
-mwm*XmScrollBar*bottomShadowColor: darkred
-mwm*troughColor: white
-mwm*showArrows: false
+emwm*XmScrollBar*background: red
+emwm*XmScrollBar*topShadowColor: salmon
+emwm*XmScrollBar*bottomShadowColor: darkred
+emwm*troughColor: white
+emwm*showArrows: false
 
 
-mwm*iconImageBackground: white
-mwm*iconImageForeground: black
-mwm*iconImageTopShadowColor: lightgrey
-mwm*iconImageBottomShadowColor: darkgrey
+emwm*iconImageBackground: white
+emwm*iconImageForeground: black
+emwm*iconImageTopShadowColor: lightgrey
+emwm*iconImageBottomShadowColor: darkgrey
 
-mwm*menu*background: black
 emwm*menu*background: lightgrey
 # mwm*menu*backgroundPixmap:
-mwm*menu*foreground: white
-emwm*menu*foreground: black
-mwm*menu*topShadowColor: skyblue
-mwm*menu*bottomShadowColor: blue
-mwm*menu*XmLabelGadget*background: #7082B5
-mwm*menu*XmLabelGadget*foreground: white
-mwm*menu*XmSeparatorGadget*foreground:skyblue
-mwm*menu*XmSeparatorGadget*background:blue
-
-
+emwm*menu*foreground: white
+eemwm*menu*foreground: black
+emwm*menu*topShadowColor: skyblue
+emwm*menu*bottomShadowColor: blue
+emwm*menu*XmLabelGadget*background: #7082B5
+emwm*menu*XmLabelGadget*foreground: white
+emwm*menu*XmSeparatorGadget*foreground:skyblue
+emwm*menu*XmSeparatorGadget*background:blue
 mwm*menu*back*backgound:green
 
 # beathor:
-mwm*leftTitle:trues
-mwm*moveOpaque: true
 emwm*moveOpaque: true
-mwm*showFeedback: behavior restart quit
 emwm*showFeedback: behavior restart quit
 # placement / resize / behavior / restart / quit
 # icons:
-mwm*useIconBox:	true
 emwm*useIconBox: true
-mwm*iconBoxTitle: Apps
 emwm*iconBoxTitle: "Apps"
 mwm*fadeNormalIcon: false
 # mwm*iconBoxName: 
-mwm*iconBoxSBDisplayPolicy: horizontal
+
 emwm*iconBoxSBDisplayPolicy: horizontal
 # all / vertical / horizontal
 
-mwm*iconPlacement: left bottom
+emwm*iconPlacement: left bottom
 # top / right / left / bottom
 #<>
