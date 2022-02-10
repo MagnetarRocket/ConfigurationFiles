@@ -1,1 +1,1 @@
-PROMPT="%S%n %sk
+PROMPT="%S ◤%n %s"
