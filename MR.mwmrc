@@ -14,14 +14,15 @@
 Menu DefaultRootMenu
 {
 	"Manager Menu"		f.title
-!	"New Window"		! "/usr/bin/x-terminal-emulator &"
+	"New FileManger"	f.exec "? &"
+	"New Terminal"		f.exec "/usr/bin/x-terminal-emulator &"
 	"Shuffle Up"		f.circle_up
 	"Shuffle Down"		f.circle_down
 	"Refresh"		f.refresh
 	"Pack Icons"		f.pack_icons
 !	"Toggle Behavior..."	f.set_behavior
 	 no-label		f.separator
-	 "Apps"			f.menu "/"
+!	 "Apps"			f.menu "/"
 	 no-label		f.separator
 	 no-label		f.separator
 
@@ -29,7 +30,7 @@ Menu DefaultRootMenu
 !	"Quit..."		f.quit_mwm
 }
 
-Menu CalMenu
+Menu WinMenu
 {
 	"Manager Menu"		f.title
 !	"New Window"		f.exec "/usr/bin/x-terminal-emulator &"
@@ -107,14 +108,14 @@ Buttons DefaultButtonBindings
 {
 	<Btn1Down>	icon|frame	f.raise
 	<Btn3Down>	icon|frame	f.post_wmenu
-	<Btn3Down>	root		f.menu	CalMenu
+	<Btn3Down>	root		f.menu	WinMenu
 }
  
 Buttons ExplicitButtonBindings
 {
 	<Btn1Down>	frame|icon	f.raise
 	<Btn3Down>	frame|icon	f.post_wmenu
-	<Btn3Down>	root		f.menu	CalMenu
+	<Btn3Down>	root		f.menu	WinMenu
 !	<Btn1Up>	icon		f.restore
 	Alt<Btn1Down>	window|icon	f.lower
 !	Alt<Btn2Down>	window|icon	f.resize
@@ -126,7 +127,7 @@ Buttons PointerButtonBindings
 {
 	<Btn1Down>	frame|icon	f.raise
 	<Btn3Down>	frame|icon	f.post_wmenu
-	<Btn3Down>	root		f.menu	CalMenu
+	<Btn3Down>	root		f.menu	WinMenu
 	<Btn1Down>	window		f.raise
 !	<Btn1Up>	icon		f.restore
 	Alt<Btn1Down>	window|icon	f.lower
