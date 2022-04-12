@@ -236,10 +236,10 @@ mwm*menu*XmSeparatorGadget*foreground:skyblue
 mwm*menu*XmSeparatorGadget*background:blue
 
 
-mwm*menu*back*backgound:green
+! mwm*menu*back*backgound:green
 
 # beathor:
-mwm*leftTitle:trues
+! mwm*leftTitle:trues
 mwm*moveOpaque: true
 mwm*showFeedback: behavior restart quit
 # placement / resize / behavior / restart / quit
