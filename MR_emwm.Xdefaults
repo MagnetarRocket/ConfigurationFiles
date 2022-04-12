@@ -174,7 +174,7 @@ emwm*iconbox.clientDecoration: -resizeh -title
 emwm*background: grey
 # emwm*backgroundPixmap:/opt/x11/include/x11/bitmaps/dot
 emwm*topShadowColor: white
-# mwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
+# emwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
 emwm*bottomShadowColor: black
 # emwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
 
@@ -187,7 +187,7 @@ emwm*title*bottomShadow: black
 # emwm*feedback*foreground:dimgrey
 
 
-# mwm*activeBackgroundPixmap:/opt/x11/include/x11/bitmaps/black
+# emwm*activeBackgroundPixmap:/opt/x11/include/x11/bitmaps/black
 emwm*activeBackground: #7082B5
 emwm*activeForeground: white
 
@@ -197,14 +197,12 @@ emwm*activeBottomShadowColor: black
 emwm*activeTopShadowColor: white
 # emwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/grid2
 
-
-mwm*title*activeBackground:black
 emwm*title*activeBackground: orange
 emwm*title*activeTopShadow:Gold
 emwm*title*activeBottomShadow: goldenrod
 
 emwm*matteBackground: lightgrey
-# mwm*matteBackgroundPixmap:/opt/x11/include/x11/bitmaps/grid4
+# emwm*matteBackgroundPixmap:/opt/x11/include/x11/bitmaps/grid4
 emwm*matteForeground: black
 emwm*matteTopShadowColor:slate
 emwm*matteBottomShadowColor: white
@@ -227,7 +225,7 @@ emwm*iconImageTopShadowColor: lightgrey
 emwm*iconImageBottomShadowColor: darkgrey
 
 emwm*menu*background: lightgrey
-# mwm*menu*backgroundPixmap:
+# emwm*menu*backgroundPixmap:
 emwm*menu*foreground: white
 eemwm*menu*foreground: black
 emwm*menu*topShadowColor: skyblue
@@ -236,7 +234,6 @@ emwm*menu*XmLabelGadget*background: #7082B5
 emwm*menu*XmLabelGadget*foreground: white
 emwm*menu*XmSeparatorGadget*foreground:skyblue
 emwm*menu*XmSeparatorGadget*background:blue
-mwm*menu*back*backgound:green
 
 # beathor:
 emwm*moveOpaque: true
@@ -245,7 +242,7 @@ emwm*showFeedback: behavior restart quit
 # icons:
 emwm*useIconBox: true
 emwm*iconBoxTitle: "Apps"
-mwm*fadeNormalIcon: false
+emwm*fadeNormalIcon: false
 # mwm*iconBoxName: 
 
 emwm*iconBoxSBDisplayPolicy: horizontal
