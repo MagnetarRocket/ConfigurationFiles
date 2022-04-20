@@ -23,7 +23,7 @@ NoDefaults
 
 # DontShowIconManager
 SortIconManager
-IconifyByUnmapping
+# IconifyByUnmapping
 
 RightHandSidePulldownMenus
 
@@ -197,7 +197,8 @@ LeftTitleButton ":xpm:darrow" = f.menu "arrange"
 RightTitleButton ":xpm:dot" = f.iconify
 RightTitleButton ":xpm:resize" = f.zoom
 
-Button1 = : root : f.version
+Button1 = : root : f.beep
+Button2 = : root : f.beep
 Button3 = : root : f.menu "main"
 
 Button1 = : title : f.function "move-or-raiselower"
@@ -239,6 +240,8 @@ menu "main"
 	"window list"		f.menu "TwmWindows"
 	"Operations"		f.menu "ops"
 	"Arrange"		f.menu "arrange"
+	""			f.separator
+	"About"			f.version
 	""			f.separator
 	"Restart"		f.restart
 	"Exit"			f.quit
