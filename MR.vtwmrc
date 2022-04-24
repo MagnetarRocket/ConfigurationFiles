@@ -1,14 +1,4 @@
 #
-# system.vtwmrc.3D
-# 
-# Default VTWM configuration file; should be kept small to conserve string  
-# space in systems whose compilers don't handle medium-sized strings.
-#
-# Sites should tailor this file, providing any extra title buttons, menus, 
-# etc., that may be appropriate for their environment.  For example, if most    
-# of the users were accustomed to uwm, the defaults could be set up not to 
-# decorate any windows and to use meta-keys.  
-#
 
 #why did the Majority of the netBSD project chose ctwm or even a beginer frendly configuration of twm
 #instead of this?(even with vtwm taking up around 219.663 KB and equaling CTWM's features over CTWM taking up 667.66 KB) That i'll never understand.
@@ -32,8 +22,8 @@ NotVirtualGeometries
 FixManagedVirtualGeometries
 FixTransientVirtualGeometries
 
-ButtonColorIsFrame
-ShallowReliefWindowButton
+# ButtonColorIsFrame
+# ShallowReliefWindowButton
 NoMenuShadows
 
 MoveDelta			3
@@ -44,8 +34,8 @@ ResizeRegion			"NorthEast"
 
 FramePadding			2
 ButtonIndent			-2
-TitlePadding			0
-TitleButtonBorderWidth		0
+TitlePadding			2
+TitleButtonBorderWidth		1
 
 BorderWidth			6
 BorderBevelWidth		2
@@ -111,42 +101,42 @@ DontShowInDisplay
 IconManagerDontShow
 {
 	"VTWM *"
-	"xclock"
-	"xload"
 }
 
 Pixmaps
 {
-	TitleHighlight		":xpm:sunkenlines"
-	MenuIconPixmap		":xpm:rarrow"
-	IconManagerPixmap	":xpm:box"
+	TitleHighlight		":xpm:menu"
+	MenuIconPixmap		":xpm:dot"
+	IconManagerPixmap	":xpm:dot"
 }
-
+# xpm1:
+# /:xpm:sunkenlines/:xpm:box
 Color
 {
-	DefaultBackground		"#20305a"
-	DefaultForeground		"gray85"
+	DefaultBackground		"grey"
+	DefaultForeground		"black"
 	
-	BorderColor			"orange"
-	BorderTileBackground		"orange"
+	BorderColor			"crimson"
+	BorderTileBackground		"dimgrey"
 	BorderTileForeground		"yellow"
 	
 	# DoorBackground			"#20305a"
 	# DoorForeground			"gray85"
 	
-	TitleBackground			"grey"
+	TitleBackground			"lightgrey"
 	TitleForeground			"black"
 	
 	MenuBackground			"grey"
 	MenuForeground			"black"
-	MenuTitleBackground		"orange"
-	MenuTitleForeground		"#20305a"
 	
-	IconBackground			"#20305a"
-	IconForeground			"gray85"	
-	IconBorderColor			"gray85"
+	MenuTitleBackground		"lightgrey"
+	MenuTitleForeground		"black"
 	
-	IconManagerBackground		"#20305a"
+	IconBackground			"white"
+	IconForeground			"gray"	
+	IconBorderColor			"dimgrey"
+	
+	IconManagerBackground		"orange"
 	IconManagerForeground		"gray85"
 	
 	VirtualBackground		"gray70"
@@ -191,23 +181,30 @@ Monochrome
 
 Function "move-or-iconify" { f.move f.deltastop f.iconify }
 Function "move-or-raiselower" { f.move f.deltastop f.raiselower }
+Function "move-or-raise"	{f.move f.deltastop f.raise}
 Function "warpwindow"         { f.warpsnug f.warp f.warpsnug }
 
-LeftTitleButton ":xpm:darrow" = f.menu "arrange"
+LeftTitleButton ":darrow" = f.menu "Window ops"
+LeftTitleButton ":xpm:box" =f.delete
 RightTitleButton ":xpm:dot" = f.iconify
-RightTitleButton ":xpm:resize" = f.zoom
+RightTitleButton ":xpm:zoom" = f.zoom
+
+#/:xlogo/:iconify
+#/:xpm:dot/:xpm:resize/:xpm:menu/:xpm:zoom
+#/:xpm:bar/:xpm:darrow/:xpm:rarrow/:xpm:box
+#/:resize/:menu/:darrow/:rarrow
 
 Button1 = : root : f.beep
 Button2 = : root : f.beep
 Button3 = : root : f.menu "main"
 
-Button1 = : title : f.function "move-or-raiselower"
+Button1 = : title : f.function "move-or-raise"
 Button2 = : title : f.resize
 Button3 = : title : f.raiselower
 
 Button1 = : frame : f.resize
 Button2 = : frame : f.move
-Button3 = : frame : f.iconify
+Button3 = : frame : f.nop
 
 Button1 = : door : f.enterdoor
 Button2 = : door : f.namedoor
@@ -238,7 +235,7 @@ menu "main"
 	"Applications"		f.menu "apps"
 	""			f.separator
 	"window list"		f.menu "TwmWindows"
-	"Operations"		f.menu "ops"
+	"Window Ops"	f.menu "Window ops"
 	"Arrange"		f.menu "arrange"
 	""			f.separator
 	"About"			f.version
@@ -268,13 +265,13 @@ menu "ops"
 	"Refresh"		f.refresh
 }
 
-menu "arrange"
+menu "Window ops"
 {
 	"  Arrange  "		f.title
 	"Autoraise"		f.autoraise
 	"Raise"			f.raise
 	"Lower"			f.lower
-	"Nail"			f.nail
+	#"Nail"			f.nail
 	""			f.separator
 	"Move"			f.move
 	"Size"			f.resize
@@ -290,6 +287,6 @@ menu "arrange"
 	""			f.separator
 	"Identify"		f.identify
 	""			f.separator
-	"Delete"		f.delete
-	"Destroy"		f.destroy
+	"Close"			f.delete
+	"Kill"			f.destroy
 }
