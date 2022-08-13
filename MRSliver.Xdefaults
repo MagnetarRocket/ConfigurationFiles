@@ -1,0 +1,602 @@
+! some apps can have seprate dialog windows a diffrent color then the parent window, just look at the name of the dialog window in front of you or the man page. 
+! the loose guidelines are: Console output and dangerous stuff is in red, file dialogs are black and white, Scrollbars are Lightgrey and darkgrey, Buttons and menu are lightgrey & black, long human read-only text is cornsilk, editable text is black and white
+! some scrollbars are in black only, the author was unable to make them constitant, when the author was unable to make them constitant, he tried to make them color matching with the text
+! any app that has color prefrences defined will overide global
+
+! <external files>
+! include "./Users/scragg/Configurations/mr_xclock.rc"
+
+! <global>
+*fontList:*-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-15
+
+*highlightColor: lightblue
+! *highlightPixmap:opt/x11/include/x11/bitmaps/grid4
+*highlightOnEnter: true
+! *highlightThickness:1
+! lightgrey
+! #E5E5E5 #whitesmoke #dimgrey
+
+! <toggle>
+! *fillOnSelect: true
+! *indicatorOn: false
+*selectColor: lightblue
+! *XmToggleButton*shadowThickness:1
+
+# <>
+*background: grey
+! antiquewhite
+*foreground:black
+! *backgroundPixmap: /Volumes/cal_main/mutimedia/Raster-Icons/rainbow_barm.xpm
+! common-de-icons/backdrops/Leaves.pm \ images/other-people/liberty.xpm
+*topShadowColor:whitesmoke
+! cornsilk
+# *topShadowPixmap:/opt/x11/include/x11/bitmaps/1x1
+*bottomShadowColor:dimgrey
+! goldenrod
+# *bottomShadowPixmap:/opt/x11/include/x11/bitmaps/1x1
+*shadowThickness: 1
+
+# *borderWidth:1
+# *borderColor: black
+
+*feedback*background:white
+*feedback*foreground:navy
+
+*label*background:black
+*label*foreground:white
+
+*XmText*background:white
+*XmText*foreground:black
+*XmText*topShadowColor: whitesmoke
+*XmText*bottomShadowColor:dimgrey
+
+*XmTextField*background:white
+*XmTextField*foreground:black
+*XmTextField*topShadowColor: whitesmoke
+*XmTextField*bottomShadowColor:dimgrey
+
+*XmContainer*background: white
+*XmContainer*foreground: black
+! *XmContainer*backgroundPixmap:
+
+*text*background:white
+*text*foreground:black
+*text*topShadowColor: whitesmoke
+*text*bottomShadowColor:dimgrey
+*text*backgroundPixmap:/Volumes/cal_main/mutimedia/images/other-people/common-de-icons/backdrops/Foreground.bm
+
+*XmPushButton.topShadowColor:whitesmoke
+*XmPushButton.bottomShadowColor:dimgrey
+*XmPushButton.background: #E5E5E5
+*XmPushButton.foreground: black
+# *XmPushButton.backgroundPixmap:/Volumes/cal_main/mutimedia/images/other-people/common-de-icons/backdrops/Convex.pm
+
+*XmPushButtonGadget.topShadowColor:Purple
+*XmPushButtonGadget.bottomShadowColor:indigo
+*XmPushButtonGadget.background: darkcyan
+*XmPushButtonGadget.foreground: white
+
+# *XmCascadeButton.background:white
+# *XmCascadeButton.foreground:black
+
+*XmCascadeButtonGadget.background:black
+*XmCascadeButtonGadget.foreground:white
+
+*XmSpinBox.topShadowColor:whitesmoke
+*XmSpinBox.bottomShadowColor:dimgrey
+*XmSpinBox.background: #E5E5E5
+*XmSpinBox.foreground: black
+
+*XmComboBox.topShadowColor:whitesmoke
+*XmComboBox.bottomShadowColor:dimgrey
+*XmComboBox.background: #E5E5E5
+*XmComboBox.foreground: black
+
+*XmList.topShadowColor:whitesmoke
+*XmList.bottomShadowColor:dimgrey
+*XmList.background: #E5E5E5
+*XmList.foreground: black
+
+# *XmSelectionBox.background: black
+# *XmSelectionBox.foreground: white
+
+# *XmLabel.background: darkgreen
+# *XmLabel.foreground: lime
+
+# *XmLabelGadget.background:darkgreen
+# *XmLabelGadget.foreground:lime
+
+# *XmToggle: Sage
+*XmToggleButton*topShadowColor:WhiteSmoke
+*XmToggleButton*bottomShadowColor:dimgrey
+*XmToggleButton*selectColor:White
+*XmToggleButton*unselectColor:White
+# *XmToggleButton.background: White
+# *XmToggleButton.foreground: cyan
+*XmToggleButton*indicatorType:ONE_OF_MANY_DIAMOND
+#///ONE_OF_MANY_ROUND/ONE_OF_MANY_DIAMOND
+*XmToggleButton*indicatorOn: INDICATOR_CHECK_BOX
+# INDICATOR_BOX/INDICATOR_CHECK/INDICATOR_CHECK_BOX/INDICATOR_CROSS_BOX/INDICATOR_CROSS
+*XmToggleButton*fillOnSelect: true
+*XmToggleButton*detailShadowThickness:1
+*XmToggleButton*selectColor:HIGHLIGHT_COLOR
+#/DEFAULT_SELECT_COLOR/REVERSED_GROUND_COLORS/HIGHLIGHT_COLOR
+
+
+*XmToggleButtonGadget.background: black
+*XmToggleButtonGadget.foreground: white
+*XmToggleButtonGadget.shadowThickness:1
+
+
+
+# <global scrollbar>
+
+# *scrollBar: true
+ *scrollbar*Background: darkgrey
+ *scrollbar*Foreground: #E5E5E5
+# *scrollbar*Color:black
+
+# *XmScrolledWindow.background: black
+# *XmScrolledWindow.foreground: white
+
+# *XmNborderColor*topShadowColor:lime
+
+*arrowButton*background: white
+
+*scrollbar*thickness: 16
+# *scrollbar*Background: #E5E5E5
+# *scrollbar*Foreground: #E5E5E5
+*thumb: /Users/scragg/pictures/local-icons/p3dbar
+
+*XmForeground: blue
+
+*scrollBarPlacement: TOP_LEFT
+# /TOP_RIGHT /TOP_LEFT /BOTTOM_RIGHT /BOTTOM_LEFT
+*XmScrollBar*showArrows: MIN_SIDE
+# EACH_SIDE /MAX_SIDE /MIN_SIDE /NONE
+*XmScrollBar*sliderMark: THUMB_MARK
+# /ETCHED_LINE/NONE/ROUND_MARK/THUMB_MARK
+
+*XmScrollBar*background: lightgrey
+! *XmScrollBar*forground: white
+! *XmScrollbar*borderColor: lime
+! *XmScrollBar*backgroundPixmap:/opt/x11/include/x11/bitmaps/1x1
+*XmScrollBar*topShadowColor: whitesmoke
+*XmScrollBar*bottomShadowColor: darkgrey
+*XmScrollBar*troughColor: dimgrey
+
+! <global menu(cascading buttons)>
+*menuBar*Background: black
+*menuBar*Foreground: white
+*menuBar*topShadowColor:black
+*menuBar*bottomShadowColor:grey
+# *menuBar*backgroundPixmap:
+
+*menu*background:black
+*menu*foreground:white
+*menu*topShadowColor:black
+*menu*bottomShadowColor:grey
+
+*control*matteBackgound: lightgrey
+*control*matteForeground: darkgrey
+*menuBar*topShadowColor:whitesmoke
+*menuBar*bottomShadowColor:grey
+
+*enableEtchedInMenu: false
+*enableMenuInCascade: true
+
+*XmArrowButton*Foreground: blue
+*XmArrowButton*Background: skyblue
+
+*XmArrowButtonGadget*ForeGround: dimred
+*XmArrowButtonGadget*Background: crimson
+
+
+! <xclock>
+# xclock*xrm: "/Users/scragg/Configurations/mr_xclock.rc"
+xclock*width:150
+xclock*height:150
+
+xclock*background: black
+xclock*foreground: lightgrey
+xclock*hourColor: crimson
+xclock*minuteColor: darkred
+xclock*secondColor:cyan
+xclock*majorColor: gold
+xclock*minorColor: goldenrod
+xclock*analog: true
+xclock*twentyFour: true
+! <xedit>
+xedit*Background:darkgrey
+xedit*Foreground:lightgrey
+
+xedit*buttons*Background: lightgrey
+xedit*buttons*Foreground: darkgrey
+
+xedit*buttons*filename*Background: white
+xedit*buttons*filename*Foreground: black
+
+
+xedit*messageWindow*Background: darkred
+xedit*messageWindow*Foreground: red
+
+xedit*labelWindow*Background: darkgrey
+xedit*labelWindow*Foreground: lightgrey
+
+xedit*editWindow*scrollbar*Background: darkgrey
+xedit*editWindow*scrollbar*Foreground: lightgrey
+xedit*editWindow*thickness: 16
+xedit*editWindow*thumb: black
+
+xedit*editWindow*Background: white
+xedit*editWindow*Foreground: black
+
+
+# <>
+# Control*Background: White
+# Control*Foreground: black
+# <nedit>
+
+nedit*text*background:black
+nedit*text*foreground:white
+# nedit*text*topShadowColor: black
+# nedit*text*bottomShadowColor:dimgrey
+# nedit*text*
+# nedit*background: lightgrey
+# nedit*foreground: black
+
+#nedit*topShadowColor: 
+#nedit*bottomShadowColor:
+
+#nedit*menu*Background:white
+nedit*menu*Foreground:black
+
+nedit.visualID: Default
+#/Best /Default
+#nedit:
+
+# <xconsole>
+xconsole*background: darkred
+xconsole*Foreground: red
+xconsole*scrollbar*Background: darkgrey
+xconsole*scrollbar*Foreground: lightgrey
+xconsole*scrollBar: false
+#<xterm>
+XTerm*background: white
+XTerm*foreground: black
+
+XTerm*scrollbar*Background: darkgrey
+XTerm*scrollbar*Foreground: #E5E5E5
+XTerm*scrollBar: true
+XTerm*thickness: 14
+XTerm*thumb: /Users/scragg/pictures/local-icons/p3dbar
+
+XTerm*toolbar*background:lightgrey
+XTerm*toolbar*foreground:black
+XTerm*toolBar: true
+XTerm*menuHeight:25
+
+XTerm*cursorBlink: true
+! false/true/always/never
+
+! <classic colors>
+
+classic-colors*backgroundBitmap:/Volumes/cal_main/mutimedia/Raster-Icons/rainbow_barm.xpm
+
+! <bitmap>
+
+#bitmap*foreground:white
+#bitmap*foreground:black
+
+bitmap*fileButton*background: white
+bitmap*fileButton*foreground: black
+
+bitmap*fileMenu*background: black
+bitmap*fileMenu*foreground: white
+
+bitmap*editButton*background: white
+bitmap*editButton*foreground: black
+
+bitmap*editMenu*background: black
+bitmap*editMenu*foreground: white
+
+bitmap*bitmap*background:white
+
+#bitmap*form*background: lightgrey
+#bitmap*form*foreground: black
+
+bitmap*form*clear*background: darkred
+bitmap*form*clear*foreground: red
+
+bitmap*form*set*background: white
+bitmap*form*set*foreground: black
+
+bitmap*form*invert*background: white
+bitmap*form*invert*foreground: black
+
+bitmap*form*mark*background: white
+bitmap*form*mark*foreground: black
+
+bitmap*form*unmark*background: white
+bitmap*form*unmark*foreground: black
+
+bitmap*form*copy*background: white
+bitmap*form*copy*foreground: black
+
+bitmap*form*move*background: white
+bitmap*form*move*foreground: black
+
+bitmap*form*setHotSpot*background: white
+bitmap*form*setHotSpot*foreground: black
+
+bitmap*form*clearHotSpot*background: white
+bitmap*form*clearHotSpot*foreground: black
+
+bitmap*form*undo*background: white
+bitmap*form*undo*foreground: black
+
+bitmap*image*background:White
+bitmap*image*foreground:black
+
+bitmap*error*background:darkred
+bitmap*error*foreground:red
+
+bitmap*input*background:White
+bitmap*input*foreground:black
+
+bitmap*qsave*background:White
+bitmap*qsave*foreground:black
+
+
+# <UXTerm>
+UXTerm*scrollBar: false
+UXTerm*toolBar: true
+
+UXTerm*background: black
+UXTerm*foreground: white
+UXTerm*thickness: 14
+UXTerm*thumb: black
+UXTerm*scrollBar*background: green
+UXTerm*scrollBar*foreground: red
+# <twm>
+
+# <urxvt>
+urxvt*iconFile: woman
+urxvt*background:white
+urxvt*foreground:black
+urxvt*border:lightgrey
+
+urxvt*troughColor: darkgrey
+urxvt*scrollColor: #E5E5E5
+
+urxvt*scrollstyle: rxvt
+# rxvt / plain / next / xterm
+
+urxvt*thickness: 12
+urxvt*scrollBar: true
+urxvt*scrollBar_right: false
+urxvt*scrollBar_floating: false
+
+urxvt*SHELL: /opt/brew/bin/rc
+#urxvt*backspacekey: BACKSPACE
+#urxvt*deletekey: U+0008
+# <xman>
+xman*bothShown: true
+xman*verticalList: true
+xman*background: white
+xman*foreground: black
+
+xman*horizPane*background: lightgrey
+xman*horizPane*foreground: black
+
+xman*manualPage*background:antiquewhite
+xman*manualPage*foreground:black
+
+xman*manualPage*scrollbar*Background: darkgrey
+xman*manualPage*scrollbar*Foreground: #E5E5E5
+xman*manualPage*thickness: 14
+
+xman*optionMenu*background: lightgrey
+xman*optionMenu*foreground: black
+
+xman*sectionMenu*background: antiquewhite
+xman*sectionMenu*foreground: black
+
+xman*search*background:white
+xman*search*foreground:black
+
+xman*help*background:lightgrey
+xman*help*foreground:black
+
+xman*help*manualPage*background:cornsilk
+xman*help*manualPage*foreground:black
+
+xman*help*manualPage*scrollbar*Background: darkgrey
+xman*help*manualPage*scrollbar*Foreground: #E5E5E5
+xman*help*manualPage*thickness: 14
+
+xman*topBox*background:lightgrey
+xman*topbox*foreground:black
+
+xman*simpleMenu*background:lightgrey
+xman*simpleMenu*foreground:black
+
+xman*menu*background: lightgrey
+xman*menu*foreground: black
+
+xman*directory*scrollbar*Background: darkgrey
+xman*directory*scrollbar*Foreground: #E5E5E5
+
+xman*scrollbar*Background: darkgrey
+xman*scrollbar*Foreground: #E5E5E5
+xman*scrollBar: true
+xman*thickness: 14
+# xman*thumb: black
+
+# <grace>
+grace*GRACE_HELPVIEWER:
+
+# <xmToolBox>
+xmtoolbox*ShowSuspend: False
+
+# <mwm/emwm>
+# apperance:
+# mwm*useIr: false (Use Sgi-style icons in the buttons)
+emwm*titleLeft: true
+
+mwm*frameStyle: recessed
+emwm*frameStyle: slab
+# slab / recessed
+mwm*iconDecoration: label image
+emwm*iconDecoration: label image
+# label / image / label image
+mwm*frameBorderWith: 10
+mwm*resizeBorderWidth: 10
+mwm*matteWidth: 0
+
+# -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1 #
+mwm*fontList: -b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1
+
+# colors:
+# #7082B5 $195;196;237 #8E8290
+
+# window button prefrences:
+# resizeh menu title minimize maximize (a future version is "zap" as in the windows close button)
+mwm*xclock.clientDecoration: -resizeh -title -maximize
+emwm*xclock*clientDecoration: -resizeh -title
+mwm*xman.clientDecoration: +resizeh +menu +title
+# mwm*urxvt.clientDecoration: +resizeh +menu +minimize 
+# mwm*xterm.clientDecoration: +resizeh
+# mwm*clientDecoration: +resizeh +menu +minimize +zap
+# mwm*zapAfterTwo: false
+emwm*xmtoolbox.clientDecoration: +title
+mwm*iconbox.clientDecoration: -resizeh -title
+emwm*iconbox.clientDecoration: -resizeh -title
+
+# pixmaps:
+# /opt/x11/include/x11/bitmaps
+
+# mwm*background: salmon
+# emwm*background: grey
+# mwm*backgroundPixmap:/opt/x11/include/x11/bitmaps/dot
+# emwm*backgroundPixmap:/Volumes/cal_main/mutimedia/images/other-people/common-de-icons/backdrops/Convex.pm
+# mwm*foreground: black
+
+# mwm*topShadowColor: lightsalmon
+# emwm*topShadowColor: white
+
+# mwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
+# emwm*topShadowPixmap:/opt/x11/include/x11/bitmaps/black
+# mwm*bottomShadowColor: crimson
+# emwm*bottomShadowColor: black
+
+# mwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
+# emwm*bottomShadowPixmap:/opt/x11/include/x11/bitmaps/black
+
+mwm*title*background:darkblue
+mwm*title*foreground:skyblue
+emwm*title*topShadow:black
+emwm*title*bottomShadow: white
+# mwm*title*backgroundPixmap:/Users/scragg/Pictures/local-icons/pinstripes2
+# emwm*title*backgroundPixmap:/Volumes/cal_main/mutimedia/images/other-people/common-de-icons/backdrops/Foreground.pm
+
+# mwm*feedback*background:#E5E5E5
+# mwm*feedback*foreground:dimgrey
+
+mwm*activeBackground: #7082B5
+! mwm*activeBackgroundPixmap:/Users/scragg/Pictures/local-icons/pinstripes2
+emwm*activeBackgroundPixmap:/Volumes/cal_main/mutimedia/images/other-people/common-de-icons/Vexted.pm
+emwm*activeBackground: #7082B5
+mwm*activeForeground: white
+emwm*activeForeground: white
+
+mwm*activeBottomShadowColor: blue
+emwm*activeBottomShadowColor: darkred
+# mwm*activeBottomShadowPixmap:/opt/x11/include/x11/bitmaps/grid2
+# emwm*activeBottomShadowPixmap:/opt/x11/include/x11/bitmaps/1x1
+
+mwm*activeTopShadowColor: skyblue
+emwm*activeTopShadowColor: salmon
+# mwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/grid2
+# emwm*activeTopShadowPixmap: /opt/x11/include/x11/bitmaps/1x1
+
+mwm*title*activeBackground:black
+! emwm*title*activeBackground: orange
+mwm*title*activeForeground:white
+! emwm*title*activeTopShadow:indianred
+mwm*title*activeBottomShadow: black
+! emwm*title*activeBottomShadow: darkred
+! emwm*title*activeBackgroundPixmap:/Volumes/cal_main/mutimedia/images/other-people/common-de-icons/backdrops/Foreground.pm
+! mwm*title*activeBackgroundPixmap:/Users/scragg/Pictures/local-icons/pinstripes2
+
+
+mwm*matteBackground: lightgrey
+# mwm*matteBackgroundPixmap:/opt/x11/include/x11/bitmaps/grid4
+mwm*matteForeground: black
+mwm*matteTopShadowColor:dimgrey
+mwm*matteBottomShadowColor: white
+
+mwm*XmPushButtonGadget.background: #7082B5
+emwm*XmPushButtonGadget.background: #7082B5
+mwm*XmPushButtonGadget.foreground: white
+emwm*XmPushButtonGadget.foreground: white
+
+mwm*XmPushButtonGadget.topShadowColor:skyblue
+emwm*XmPushButtonGadget.topShadowColor:skyblue
+mwm*XmPushButtonGadget.bottomShadowColor:blue
+emwm*XmPushButtonGadget.bottomShadowColor:blue
+
+mwm*XmScrollBar*background: red
+mwm*XmScrollBar*topShadowColor: salmon
+mwm*XmScrollBar*bottomShadowColor: darkred
+mwm*troughColor: white
+emwm*troughColor: white
+mwm*showArrows: false
+
+
+mwm*iconImageBackground: white
+mwm*iconImageForeground: black
+mwm*iconImageTopShadowColor: lightgrey
+mwm*iconImageBottomShadowColor: darkgrey
+
+mwm*menu*background: black
+# emwm*menu*background: orange
+# mwm*menu*backgroundPixmap:
+mwm*menu*foreground: white
+emwm*menu*foreground: White
+mwm*menu*topShadowColor: skyblue
+emwm*menu*topShadowColor: lightskyblue
+mwm*menu*bottomShadowColor: blue
+emwm*menu*bottomShadowColor: navy
+mwm*menu*XmLabelGadget*background: #7082B5
+#emwm*menu*XmLabelGadget*background: #7082B5
+mwm*menu*XmLabelGadget*foreground: white
+#emwm*menu*XmLabelGadget*foreground: white
+mwm*menu*XmSeparatorGadget*foreground:skyblue
+emwm*menu*XmSeparatorGadget*foreground:ghostwhite
+mwm*menu*XmSeparatorGadget*background:blue
+emwm*menu*XmSeparatorGadget*background:smoke
+
+mwm*menu*back*backgound:green
+
+# beathor:
+! mwm*leftTitle:true
+mwm*moveOpaque: true
+emwm*moveOpaque: true
+mwm*showFeedback: behavior restart quit
+emwm*showFeedback: behavior restart quit
+# placement / resize / behavior / restart / quit
+# icons:
+mwm*useIconBox:	true
+emwm*useIconBox: true
+mwm*iconBoxTitle: Apps
+emwm*iconBoxTitle: "Apps"
+mwm*fadeNormalIcon: false
+# mwm*iconBoxName: 
+mwm*iconBoxSBDisplayPolicy: horizontal
+emwm*iconBoxSBDisplayPolicy: horizontal
+# all / vertical / horizontal
+
+mwm*iconPlacement: left bottom
+# top / right / left / bottom
+#<>
