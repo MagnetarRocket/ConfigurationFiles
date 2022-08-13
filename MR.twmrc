@@ -8,60 +8,107 @@ IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
 #options left without brackets are global
 # <Window:>
 NoDefaults
-NoGrabServer
-# DecorateTransients
-NoTitle
-{}                 # No title bars on these windows
+# NoGrabServer
+DecorateTransients
+NoTitle # No title bars on these windows
+{
+"TWM Icon Manager"
+
+}                 
 # NoRaiseOnMove           # Drag underneath windows
 # {}
+# NoTitleHighlight
+# No borders on any windows
+
 OpaqueMove              # Show contents while dragging
-BorderWidth 1           # No borders on any windows
-ClientBorderWidth 0
-ButtonIndent 2
+EnableXrenderTransparency
+
+TitleButtonBorderWidth 0
+BorderWidth 3
+ClientBorderWidth 3
+ButtonIndent 0
 NoHighlight
 AutoRelativeResize
 FramePadding 1
 Zoom 500
+# SqueezeTitle
 
 #
 # Icons:
 #
 #IconManagerGeometry "800x60+0+0" 90      # up/left, four icons per row
-ShowIconManager                         # Use the icon manager
-#IconifyByUnmapping                      # Don't show other icons
-IconManagerDontShow
+# ShowIconManager                         # Use the icon manager
+NoIconManagers
+IconifyByUnmapping                      
+IconManagerDontShow			# Don't show other icons
 {
-        
+	
 }
 DontIconifyByUnmapping
 {
-        "XMMS"
+        
 }
 
 # apperance:
-NoMenuShadows
-SquezeTitle center 1 2
+# NoMenuShadows
+SqueezeTitle 
+{
+	"uxterm" center 1 2
+	"feh"	 right 0 0
+}
+DontSqueezeTitle
+{
+	"bitmap"
+	"uxrvt"
+	"nedit"
+}
 Color
 {
-    BorderColor "Cyan"
-    DefaultBackground "blue"
+    BorderColor "dimgrey"
+    {
+    # "xterm" "crimson"
+    "nedit" "cyan"
+    "uxterm" "lime"
+    }
+    DefaultBackground "black"
     DefaultForeground "white"
-    TitleBackground "orange"
-    TitleForeground "black"
-    MenuBorderColor "cyan"
+    TitleBackground "black"
+    TitleForeground "white"
+    MenuBorderColor "grey"
     MenuBackground "white"
     MenuForeground "black"
-    MenuTitleBackground "orange"
-    MenuTitleForeground "black"
-    IconBackground "lightblue"
-    IconForeground "black"
-    IconBorderColor "cyan"
-    IconManagerBackground "lightblue"
+    MenuTitleBackground "black"
+    MenuTitleForeground "white"
+    TitleHighlightForeground"blue"
+    TitleHighlightBackground"yellow"
+    IconBackground "grey"
+    IconForeground "white"
+    IconBorderColor "black"
+    IconManagerBackground "lightgrey"
     IconManagerForeground "black"
-    PointerForeground "firebrick"
-    PointerBackground "crimson"
+    PointerForeground "blue"
+    PointerBackground "cyan"
 
 }
+#{
+#    BorderColor "red"
+#    DefaultBackground "blue"
+#    DefaultForeground "white"
+#    TitleBackground "orange"
+#    TitleForeground "black"
+#    MenuBorderColor "crimson"
+#    MenuBackground "white"
+#    MenuForeground "black"
+#    MenuTitleBackground "orange"
+#    MenuTitleForeground "black"
+#    IconBackground "lightblue"
+#    IconForeground "black"
+#    IconBorderColor "cyan"
+#    IconManagerBackground "lightblue"
+#    IconManagerForeground "black"
+#    PointerForeground "firebrick"
+#    PointerBackground "crimson"
+#}
 
 #{
 #    BorderColor "Cyan"
@@ -91,11 +138,11 @@ Cursors
  IconMgr   "left_ptr"
  Move      "left_ptr"
  Resize    "fleur"
- Menu      "left_ptr"
+ Menu      "right_ptr"
  Button    "left_ptr"
  Wait      "clock"
- Select    "dot"
- Destroy   "target"
+ Select    "target"
+ Destroy   "star"
 }
 
 #
@@ -103,35 +150,55 @@ Cursors
 #
 MoveDelta 1
 Function "move-or-lower" { f.move f.deltastop f.lower }
-Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-raise" { f.focus f.move f.deltastop f.raise }
 Function "move-or-iconify" { f.move f.deltastop f.iconify }
+Function "shove" {f.lower}
+Function "Rise-&-focus" {f.raise f.focus}
 
 ##
 # Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
 #
-Button1 = : root : f.menu "defops"
+Button1 = : root : f.focus
+Button2 = : root :
 Button3 = : root : f.menu "main"
+
+# Button1 = : frame : f.resize
+# Button2 = : frame : 
+# Button3 = : frame : 
 
 Button1 = m : window|icon : f.function "move-or-raise"
 Button2 = m : window|icon : f.iconify
 Button3 = m : window|icon : f.function "move-or-lower"
 
-Button1 = : title : f.function "move-or-raise"
-Button2 = : title : f.raiselower
+Button1 = : title : f.move
+Button2 = : title : 
 Button3 = : title : f.menu ="window"
+#f.function "Rise-&-focus"
 
-Button1 = : icon : f.function "move-or-iconify"
+Button1 = : icon : f.function "move-or-lower"
+Button2 = : icon : 
 Button3 = : icon : f.iconify
 
-Button3 = : iconmgr : f.lower
 Button1 = : iconmgr : f.raise
+Button2 = : iconmgr : 
+Button3 = : iconmgr : f.lower
+
 
 # custom title bar:
-LeftTitleButton  "/Users/scragg/Pictures/local-icons/resizeLeft2" = f.resize
-# LeftTitleButton "/Users/scragg/Pictures/local-icons/Iconize2" = f.iconify
-LeftTitleButton "/Users/scragg/Pictures/local-icons/maxmize" = f.fullzoom
-RightTitleButton "/Users/scragg/Pictures/local-icons/close2" = f.delete
-RightTitleButton "/Users/scragg/Pictures/local-icons/resizeRight2"  = f.resize
+#LeftTitleButton  "/Users/scragg/Pictures/local-icons/resizeLeft2" = f.resize
+LeftTitleButton  "/Users/scragg/Pictures/local-icons/monoResize" = f.resize
+
+pixmaps
+{
+ TitleHighlight "/Users/scragg/Pictures/local-icons/pinstripes2"
+ BorderTile "/Users/scragg/Pictures/local-icons/p3dbar"
+}
+
+RightTitleButton "/Users/scragg/Pictures/local-icons/irclose3" = f.delete
+RightTitleButton "/Users/scragg/Pictures/local-icons/irmin2" = f.iconify
+RightTitleButton "/Users/scragg/Pictures/local-icons/irmax" = f.fullzoom
+RightTitleButton "/Users/scragg/Pictures/local-icons/amigacircle" =f.circledown
+#RightTitleButton "/Users/scragg/Pictures/local-icons/resizeRight2"  = f.resize
 
 
 #
@@ -139,16 +206,20 @@ RightTitleButton "/Users/scragg/Pictures/local-icons/resizeRight2"  = f.resize
 #
 menu "main"
 {
-"System menu"          f.title
-"uxterm"         f.exec "uxterm &"
+"System menu"	f.title
+
+"Terminal"	f.menu "term"
 "man"		f.exec "xman &"
 #"Email"         f.exec "sylpheed --geometry=202x69+0+48 &"
 #"Mozilla"       f.exec "mozilla -viewer &"
 #"Xosview"       f.exec "xosview +net &"
 "Xcalc"         f.exec "xcalc &"
-"Network"       f.menu "internet"
+"Editors"	f.menu "editors"
+# "Network"       f.menu "internet"
 "Graphics"      f.menu "graphics"
 "Music"         f.menu "music"
+""		f.title
+"Window List"	f.menu "TwmWindows"
 "Actions"	f.menu "window"
 "Twm "		f.menu "twm"
 }
@@ -160,43 +231,49 @@ menu "internet"
 "GTK-Gnutella"  f.exec "gtk-gnutella &"
 "VNC:1" f.exec "vncviewer -noauto -geometry 800x600 -depth 16 -passwd
 /root/.vnc/passwd spyro:1 &"
+}
 
-
+menu "editors"
+{
+ "xedit"	f.exec "xedit &"
+ "nedit"	f.exec "nedit &"
 }
 
 menu "graphics"
 {
-	"Graphics"      f.title
+#	"Graphics"      f.title
 # "XV"            f.exec "xv &"
 # "Gimp"          f.exec "gimp &"
-	"X bitmap editor" f.exec "bitmap &"
+# "Ximaging"	f.exec "/volumes/cal_main/code_dump/con_oringinal/zipd/open/mit/ximaging-master/src/ximaging"
+"X bitmap editor" f.exec "bitmap &"
+"Classic-colors" f.exec "/volumes/cal_main/code_dump/classic-colors-master-3/bin/classic-colors &"	
 }
 
-# menu "music"
-# {
-# "Music"         f.title
-# "XMMS"          f.exec "xmms &"
-# "Aumix"         f.exec "aumix &"
-# }
+menu "term"
+{
+"Terminals"	f.title
+"xterm"         f.exec "xterm &"
+"uxterm"        f.exec "uxterm &"
+}
 
 menu "window"
 {
 "Actions"      f.title
 "Term Window"    f.destroy
 "Delete Window"  f.delete
-"-------------"  f.nop
+""		 f.title
 "Maximize"       f.fullzoom
 "Minimize"       f.iconify
 "Resize"         f.resize
 "Move"           f.move
 "Raise"          f.raise
 "Lower"          f.lower
-"-------------"  f.nop
+""		 f.title
 "Focus"          f.focus
 "Unfocus"        f.unfocus
-"Show Iconmgr"   f.showiconmgr
-"Hide Iconmgr"   f.hideiconmgr
-"-------------"  f.nop
+# "Show Iconmgr"   f.showiconmgr
+# "Hide Iconmgr"   f.hideiconmgr
+""		 f.title
 #"Screensaver"    f.menu "screensaver"
 "Redraw"         f.refresh
 
@@ -205,13 +282,19 @@ menu "window"
 menu "twm"
 {
 "Restart"        f.restart
+"Quit TWM"	 f.startwm ""
 "Quit"           f.menu "quit"
 }
-
+menu "Wm's"
+{
+"Mwm" f.startwm "/opt/pkg/bin/mwm"
+}
 menu "quit"
 {
 "Really Quit?"     f.title
 "Quit X"              f.quit
 #"Quit all"           f.exec "killall -9 xterm"
 }
+
+
 
