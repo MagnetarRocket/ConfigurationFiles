@@ -1,0 +1,68 @@
+!*backgroundPixmap:/users/astrobux/pictures/x_themes/icon_color.xpm
+*background: gainsboro
+*highlight: skyblue
+
+# *XmText*Background: blue
+# *XmTextField*Background: green
+# *XmList*Background: red
+*cleanText: true
+
+*menuBar*Background: black
+*menuBar*Foreground: white
+! *menuBar*backgroundPixmap:/users/astrobux/pictures/x_themes/darkbrush.xpm
+
+*borderColor: grey
+*shadowThickness: 1
+! s*topShadowColor: blue
+CascadeButtonHighlight*higlight: true
+! <apps>
+
+! <nedit>
+nedit*text*backgroundPixmap:/users/astrobux/pictures/x_themes/icon_color.xpm
+! </nedit>
+
+! </xterm>
+xterm*background: white
+xterm*scrollBar: true
+! </xterm>
+
+!<xmbdfed>
+xmbdfed*Background: skyblue
+! xmbdfed*backgroundPixmap:/users/astrobux/pictures/x_themes/darkbrush.xpm
+!</xmbdfed>
+
+! <apps>
+mwm*cleanText: false
+emwm*cleanText: false
+
+mwm*showFeedback: kill quit
+
+! litebrush.xpm
+mwm*backgroundPixmap:/users/astrobux/pictures/x_themes/litebrush.xpm
+mwm*backgroundPixmap:/users/astrobux/pictures/x_themes/litebrush.xpm
+
+! medibrush.xpm
+mwm*activeBackgroundPixmap: /users/astrobux/pictures/x_themes/medibrush.xpm
+emwm*activeBackgroundPixmap: /users/astrobux/pictures/x_themes/medibrush.xpm
+
+! #ACB5B7
+mwm*activeBackground: #acb5b7
+emwm*activebackground: darkgrey
+
+mwm*activeForeground: white
+emwm*activeForeground: white
+
+mwm*moveOpaque: true
+emwm*moveOpaque: true
+emwm*titleLeft: true
+
+mwm*useIconBox: true
+emwm*useIconBox: true
+
+mwm*menu*background:dimgrey
+mwm*menu*backgroundPixmap:/users/astrobux/pictures/x_themes/darkbrush.xpm
+mwm*menu*foreground:white
+
+emwm*menu*background:dimgrey
+emwm*menu*backgroundPixmap:/users/astrobux/pictures/x_themes/darkbrush.xpm
+emwm*menu*foreground:white
