@@ -1,0 +1,441 @@
+
+# don't use the default buttons or key bindings, we define our own
+NoDefaults
+# Modifed from the default config
+DontShowWelcomeWindow
+
+ShowWorkSpaceManager
+ShowIconManager
+
+# 3D icon managers do not seemingly honor IconManagerHighlight,
+# which makes them slightly less useful
+UseThreeDIconManagers
+# UseThreeDWMap
+
+
+TitleFont        "-adobe-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*"
+MenuFont         "-adobe-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*"
+IconManagerFont  "-adobe-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*"
+IconFont         "-*-spleen-*-*-*-*-8-*-*-*-*-*-*-*"
+ResizeFont       "-*-spleen-*-*-*-*-8-*-*-*-*-*-*-*"
+WorkSpaceFont    "-*-spleen-*-*-*-*-8-*-*-*-*-*-*-*"
+WorkSpaceManagerGeometry  "128x60+0+0" 2
+IconManagerGeometry       "128x200+0+60" 1 
+#+ is left, - is right
+ThreeDBorderWidth         6
+
+RestartPreviousState
+
+DecorateTransients
+
+# allow the user to have their root window recolored as they choose
+#DontPaintRootWindow
+
+# hide window contents while altering windows for performance
+# NoOpaqueMove
+NoOpaqueResize
+
+AutoOccupy
+AutoRelativeResize
+
+CenterFeedbackWindow
+
+NoGrabServer
+
+RaiseOnClick
+
+DontMoveOff
+MoveOffResistance	  150
+
+ConstrainedMoveTime       0
+
+IgnoreLockModifier
+
+# Not actually that random.
+# Means that windows do not have to be placed by hand with a mouse,
+# which helps if you are using a keyboard only.
+RandomPlacement          "on"
+
+MoveDelta                 3
+ClearShadowContrast       40
+DarkShadowContrast        60
+MovePackResistance        100
+
+RaiseWhenAutoUnSqueeze
+ShortAllWindowsMenus
+
+OpaqueMove
+DecorateTransients
+#BeNiceToColorMap
+
+NoStackMode
+
+StayUpMenus
+WarpToDefaultMenuEntry
+MenuShadowDepth      2
+
+# warp through all windows in the current workspace
+WindowRing
+WarpRingOnScreen
+
+NoTitleHighlight
+# NoHighlight
+SunkFocusWindowTitle
+# UseSunkTitlePixmap
+UseThreeDBorders
+UseThreeDTitles
+UseThreeDMenus
+
+TitleButtonShadowDepth    2
+TitleShadowDepth          2
+TitleButtonBorderWidth    0
+TitlePadding              0
+TitleJustification        "center"
+ButtonIndent              0
+FramePadding		  0
+
+LeftTitleButton		":xpm:vbar"		=f.delete
+LeftTitleButton		":xpm:sunkresize"   = f.lower
+RightTitleButton	":xpm:iconify"      = f.iconify
+RightTitleButton	":xpm:dot"	=f.fullzoom
+
+
+# ClearShadowContrast	88
+# DarkShadowContrast	25
+
+ThreeDBorderWidth         6
+BorderShadowDepth         2
+BorderResizeCursors
+BorderWidth	10
+
+MaxIconTitleWidth         120
+NoIconManagerFocus
+IconManagerShadowDepth    1
+
+IconifyByUnmapping
+
+WMgrButtonShadowDepth	3
+WMgrHorizButtonIndent 0
+WMgrVertButtonIndent 0
+
+
+# ReallyMoveInWorkspaceManager
+# MapWindowCurrentWorkSpace {  "red" "white" }
+# DontToggleWorkSpaceManagerState
+DontWarpCursorInWMap
+NoShowOccupyAll	
+ReverseCurrentWorkspace	
+StartInMapState
+# StartInButtonState
+
+WorkSpaces 
+{
+    "1"    { "grey" "black" "darkgrey" "dimgrey" "hlines3"}
+    "2"    { "grey" "black" "salmon" "crimson" "vlines3"}
+    "3"    { "grey" "black" "mediumaquamarine" "darkgreen" "grid16"}
+    "4"    { "grey" "black" "steelblue"}
+}
+
+Cursors
+{
+  Frame    "left_ptr"
+  Title    "left_ptr"
+  Icon     "left_ptr"
+  IconMgr  "left_ptr"
+  Move     "fleur"
+  Resize   "fleur"
+  Menu     "left_ptr"
+  Button   "hand2"
+  Wait     "watch"
+  Select   "dot"
+  Destroy  "pirate"
+}
+
+Pixmaps
+{
+	Titlehighlight "xpm:~/Downloads/_titlebar-active.xpm"
+}
+#	#0200b3
+#	#6adad0
+#	#377d6f
+Color
+{
+	#Active border color
+  # BorderColor           ""
+  BorderColor           "turquoise"
+
+	#inactive border color
+  BorderTileBackground  "darkcyan"
+  # BorderTileForeground  "turquoise"
+
+  DefaultBackground     "black"
+  DefaultForeground     "white"
+
+  TitleBackground       "dodger blue"
+  TitleForeground       "white" 
+
+  MenuBackground        "darksalmon"
+  MenuForeground        "black"
+  MenuTitleBackground   "crimson"
+  MenuTitleForeground   "black"
+  # MenuShadowColor 	"black"
+
+  IconManagerBackground "black"
+  IconManagerForeground "white"
+  IconManagerHighlight  "lavender"
+
+  MapWindowBackground   "black"
+  MapWindowForeground   "white"	
+}
+
+Monochrome
+{
+    BorderColor 		"black"
+
+    BorderTileForeground 	"black"
+    BorderTileBackground 	"white"
+
+    TitleForeground 		"black"
+    TitleBackground 		"white"
+    
+    IconManagerBackground	"black"
+    IconManagerForeground	"white"
+
+    MenuForeground 		"black"
+    MenuBackground 		"white"
+    MenuTitleForeground 	"black"
+    MenuTitleBackground 	"white"
+
+    MapWindowForeground 	"white"
+    MapWindowBackground 	"black"
+}
+
+syscmd(/usr/X11R7/libexec/ctwm_app_menu)
+
+menu "appmenu"
+{
+    "pkgsrc Applications"	f.title
+    " Accessories"		f.menu "Accessories"
+    " Games"			f.menu "Games"
+    " Graphics"			f.menu "Graphics"
+    " Internet"			f.menu "Internet"
+    " Multimedia"		f.menu "Multimedia"
+    " Office"			f.menu "Office"
+    " Programming"		f.menu "Programming"
+    " System"			f.menu "System"
+    " Misc"			f.menu "Misc"
+}
+
+menu "deskutils"
+{
+    "Desktop utilities"		f.title
+    " Calculator"		!"xcalc &"
+    " Text editor"		!"xedit &"
+    ""				f.separator
+    " XEyes"			!"xeyes &"
+    " OpenGL Gears"		!"glxgears &"
+    " Spinning cube"		!"ico -sleep 0.016 -obj cube -colors darkorange &"
+    ""				f.separator
+    " Compositor (shadows)"	!"pkill xcompmgr; xcompmgr -c &"
+    " Compositor (simple)"	!"pkill xcompmgr; xcompmgr -n &"
+    ""				f.separator
+    " Magnify"			!"xmag -source 100x100 &"
+    " Kill window"		!"xkill &"
+}
+
+menu "termutils"
+{
+    "Terminal utilities"	f.title
+    ""				f.separator
+    "VI Editor"		!"xterm -class UXTerm -e vi &"
+    "Pico"			!"xterm -class UXTerm -e pico &"
+    "Tetris"			!"xterm -class UXTerm -e tetris &"
+    ""				f.separator
+    "Audio mixer"		!"xterm -class UXTerm -e aiomixer &"
+    ""				f.separator
+    "Top processes"		!"xterm -class UXTerm -e top &"
+    "I/O stats"		!"xterm -class UXTerm -e 'sysstat iostat' &"
+    "Network stats"		!"xterm -class UXTerm -e 'sysstat ifstat' &"
+    "Disk usage"		!"xterm -class UXTerm -e 'sysstat df' &"
+}
+
+menu "motif"
+{
+	"xNedit"	!"xnedit &"
+	"ddd"		!"ddd &"
+	"xpdf"		!"xpdf &"
+	"Ted"		!"Ted &"
+	"xImaging"	!"ximaging &"
+	"xFile"		!"xfile &"
+}
+
+menu "NetBSD"
+{
+    "Main menu"			f.title
+    ""				f.separator
+    "Terminal"			!"uxterm &"
+    ""				f.separator
+    "Applications"		f.menu "appmenu"
+    "Desktop utilities"	f.menu "deskutils"
+    "Terminal utilities"	f.menu "termutils"
+    "Motif Applications"	f.menu "motif"
+    ""				f.separator
+    "Restart CTWM"		f.twmrc
+    "Quit"			f.quit
+}
+
+menu "titleops"
+{
+    # "Window"       f.title
+    ""             f.separator
+    "Iconify"     f.iconify
+    "Resize"      f.resize
+    "Move"        f.move
+    ""             f.separator
+    "Occupy ..."  f.occupy
+    "Occupy All"  f.occupyall
+    ""             f.separator
+    "Arise"       f.raise
+    "Lower"       f.lower
+    ""             f.separator
+    "Grow/Shrink"        f.fullzoom
+    ""             f.separator
+    "Kill"        f.destroy
+    "Exit"       f.delete
+}
+
+IconManagerDontShow
+{
+	"TWM Icon Manager"
+	"WorkSpaceManager"
+} 
+
+OccupyAll 
+{
+   "XClock"
+   "xsm"
+   "xconsole"
+   "XVidCap"
+}
+
+AlwaysOnTop
+{
+   "XEyes"
+   "XVidCap"
+}
+
+NoTitle 
+{
+   "TWM Icon Manager"
+   "WorkSpaceManager"
+}
+
+
+
+WindowRingExclude
+{
+   "TWM Icon Manager"
+   "WorkSpaceManager"
+   "XClock"
+   "xsm"
+   "xconsole"
+}
+
+StartIconified 
+{ 
+}
+
+NoBorder
+{
+   "TWM Icon Manager"
+   "WorkSpaceManager"
+}
+
+Function "raise-move"          { f.raise f.deltastop f.forcemove }
+Function "raise-and-resize"    { f.raise f.deltastop f.resize }
+
+# These are basically essential for basic functionality.
+
+# Alter as needed, eg: two-button and one button mice-using
+# systems may not see the extra buttons aside from "Button1".
+
+Button1 =	: title		: f.function "raise-move"
+Button2 =	: title		: f.menu "titleops"
+# Button3 =	: title | frame	: f.function "raise-and-resize"
+Button3 = 	: title 	: f.menu "titleops"
+
+Button1 =	: frame		: f.function "raise-and-resize"
+
+Button1 =	: icon | iconmgr	: f.iconify
+Button2 =	: icon			: f.move
+Button3 =	: icon | iconmgr	: f.raiselower
+
+Button1 =	: root		: f.menu "NetBSD"
+Button2 =	: root		: f.menu "TwmAllWindows"
+Button3 =	: root		: f.menu "TwmAllWindows"
+
+#
+# Mod1 is the "Alt/Meta" key.
+# Mod4 is the "OS" key.
+#
+
+Button1 = mod1	: window	: f.forcemove
+Button1 = mod4	: window	: f.forcemove
+Button3 = mod1	: window 	: f.resize
+Button3 = mod4	: window 	: f.resize
+
+"Up"     = mod4           : all : f.upworkspace
+"Down"   = mod4           : all : f.downworkspace
+"Left"   = mod4           : all : f.prevworkspace
+"Right"  = mod4           : all : f.nextworkspace
+
+"Up"     = mod1 | control : all : f.upworkspace
+"Down"   = mod1 | control : all : f.downworkspace
+"Left"   = mod1 | control : all : f.prevworkspace
+"Right"  = mod1 | control : all : f.nextworkspace
+
+"1"      = mod1 | control : all : f.gotoworkspace "1"
+"2"      = mod1 | control : all : f.gotoworkspace "2"
+"3"      = mod1 | control : all : f.gotoworkspace "3"
+"4"      = mod1 | control : all : f.gotoworkspace "4"
+"5"      = mod1 | control : all : f.gotoworkspace "5"
+"6"      = mod1 | control : all : f.gotoworkspace "6"
+"7"      = mod1 | control : all : f.gotoworkspace "7"
+"8"      = mod1 | control : all : f.gotoworkspace "8"
+"9"      = mod1 | control : all : f.gotoworkspace "9"
+
+"1"      = mod4 : all : f.gotoworkspace "1"
+"2"      = mod4 : all : f.gotoworkspace "2"
+"3"      = mod4 : all : f.gotoworkspace "3"
+"4"      = mod4 : all : f.gotoworkspace "4"
+"5"      = mod4 : all : f.gotoworkspace "5"
+"6"      = mod4 : all : f.gotoworkspace "6"
+"7"      = mod4 : all : f.gotoworkspace "7"
+"8"      = mod4 : all : f.gotoworkspace "8"
+"9"      = mod4 : all : f.gotoworkspace "9"
+
+"XF86AudioRaiseVolume" = : all : !"mixerctl -w outputs.master+=5"
+"XF86AudioLowerVolume" = : all : !"mixerctl -w outputs.master-=5"
+#"XF86AudioMute"        = : all : !"mixerctl -w outputs.master=0"
+
+#
+# "Windows" style keyboard shortcuts
+#
+
+"Tab"    = mod1           : all : f.warpring "next"
+"Tab"    = mod1 | s       : all : f.warpring "prev"
+"Tab"    = mod4           : all : f.warpring "next"
+"Tab"    = mod4 | s       : all : f.warpring "prev"
+"space"  = mod1           : window : f.menu "titleops"
+"F4"     = mod1           : window : f.delete
+
+#
+# "Mac" style keyboard shortcuts
+#
+
+"w"      = mod4           : window : f.delete
+"m"      = mod4           : window : f.iconify
+
+# DO NOT TRY KEYBOARD SHORTCUTS ON EMULATED/VIRTUALIZED SYSTEMS!
+# MAY TRIGGER HOST OS KEYBOARD SHORTCUTS INSTEAD OF GUEST OS!
+
