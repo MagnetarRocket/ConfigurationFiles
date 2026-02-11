@@ -73,7 +73,7 @@ TitleStyle	InactiveDown Simple -- Sunk
 
 ButtonStyle 1 Active Simple -- Sunk
 # ButtonStyle 1 ActiveDown Simple --Sunk
-BorderStyle --Simple HiddenHandles Sunk
+BorderStyle -- Simple HiddenHandles Sunk
 
 
 MenuStyle * HilightBack #6666F6
