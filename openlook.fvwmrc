@@ -1,0 +1,128 @@
+# Likely to be very very looooooong
+
+# Startup & Restart:
+AddToFunc IncFunction
++ I Module	FvwmPager
++ I Exec	xsetroot -solid corflowerblue
+
+AddToFunc
+
+AddToFunc RestartFunction
++ I Module	FvwmPager
+
+# Paths & declarations:
+
+ImagePath /usr/X11R6/include/X11/pixmaps
+
+# Menu
+
+# *FvwmButtonsBack Grey
+
+# *FvwmButtons Swallow xconsole
+
+ButtonStyle 1 Vector 4 50x75@0 25x25@0 75x25@0 50x75@1
+# ButtonStyle 1 Vector 9
+
+AddToFunc Move-or-raise
++	I Raise
++	M Move
++	D Lower
+
+AddtoFunc RiseReOrg
++	I Iconify
++	I All (CurrentPage,Iconic) PlaceAgain Icon
+
+
+# Pager:
+
+DeskTopSize 2 2
+EdgeScroll 0 0
+
+*FvwmPagerFont none
+*FvwmPagerGeometry -2-2
+Style "FvwmPager " NoTitle, NoHandles, WindowListSkip, borderWidth 0
+
+# Icons:
+DefaultIcon	xv.xpm
+Style "xconsole" icon	xterm-blank.xpm
+
+# IconBox:
+Style "*" IconBox 0 -0 -0 -0,Icon Boxx -0 0 0 0, IconFill left bottom
+
+# Standard settings:
+
+EdgeResistance 250 10
+
+ColormapFocus
+Style * SloppyFocus,
+OpaqueMoveSize -1
+OLDecor
+
+#
+
+# apperance:
+
+# HilightColor	black	grey20
+
+
+TitleStyle Centered Height 20
+TitleStyle	ActiveUp Simple -- Sunk
+TitleStyle	Inactive Simple -- Flat
+TitleStyle	ActiveDown Solid darkgrey -- Sunk
+TitleStyle	InactiveDown Simple -- Sunk
+
+ButtonStyle 1 Active Simple -- Sunk
+# ButtonStyle 1 ActiveDown Simple --Sunk
+BorderStyle --Simple HiddenHandles Sunk
+
+
+MenuStyle * HilightBack #6666F6
+MenuStyle * PopupImmediately, PopdownImmediately
+MenuStyle * MenuFace Simple -- Flat
+MenuStyle BorderWidth 0
+
+Style * FirmBorder
+Style * BorderWidth 7, HandleWidth 5
+
+Style * ForeColor black, BackColor grye
+Style * HilightFore White, HilightBack "#6666F6"
+Style * DecorateTransient
+
+# Bindings:
+
+# -window
+
+# Leftmost button
+Mouse 1  1  A  Iconify
+Mouse 3  1  A  Menu Window-Acts
+
+# Titlebar
+Mouse 1  T  A  Move-or-raise
+Mouse 3  T  A  Resize
+
+# -root window
+Mouse 1  R  A  Menu RootMenu
+Mouse 3  R  A  WindowList
+
+#Border
+Mouse 1  F  A  Resize
+
+# Icons
+Mouse 1  I  A  RiseReOrg
+
+# Menus:
+AddToMenu RootMenu
++	"Main menu"	Title
++	"X-Term"	Exec xterm &
++	""	Nop
++	"Restart"	Restart fvwm2
++	"Exit"	Quit
+
+AddToMenu Windows-Acts
++	"Move"	Move
++	"Resize"	Resize
++	"Arise"		Rise
++	"Lower"		Lower
++	""	Nop
++	"Nice close"	Delete
++	"Rude close"	Destroy
