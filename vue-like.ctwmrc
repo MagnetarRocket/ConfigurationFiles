@@ -94,7 +94,7 @@ TitleJustification        "center"
 ButtonIndent              0
 FramePadding		  0
 
-PixmapDirectory "/usr/X11R7/include/X11/pixmaps/ctwm/:/usr/X11R7/include/X11/pixmaps"
+PixmapDirectory "/usr/X11R7/include/X11/pixmaps/ctwm:/usr/X11R7/include/X11/pixmaps"
 {
 
 }
@@ -135,12 +135,12 @@ StartInMapState
 
 WorkSpaces 
 {
-    "1"    { "grey" "black" "darkgrey" "dimgrey" "hlines3"}
-    "2"    { "grey" "black" "salmon" "crimson" "vlines3"}
-    "3"    { "grey" "black" "mediumaquamarine" "darkgreen" "grid16"}
-    "4"    { "grey" "black" "steelblue"}
+    "1"    { "grey" "black" "darkgrey" "dimgrey" "xpm:background7.xpm"}
+    "2"    { "grey" "black" "salmon" "crimson" "xpm:background9.xpm"}
+    "3"    { "grey" "black" "mediumaquamarine" "darkgreen" "xpm:backgound3.xpm"}
+    "4"    { "grey" "black" "steelblue" "white" "xpm:background4.xpm"}
 }
-
+# Ensure there are four valid colors in the workspace section (Button Bg and Fg, desktop Bg and Fg)
 Cursors
 {
   Frame    "left_ptr"
