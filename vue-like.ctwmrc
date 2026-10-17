@@ -94,6 +94,11 @@ TitleJustification        "center"
 ButtonIndent              0
 FramePadding		  0
 
+PixmapDirectory "/usr/X11R7/include/X11/pixmaps/ctwm/:/usr/X11R7/include/X11/pixmaps"
+{
+
+}
+
 LeftTitleButton		":xpm:vbar"		=f.delete
 LeftTitleButton		":xpm:sunkresize"   = f.lower
 RightTitleButton	":xpm:iconify"      = f.iconify
